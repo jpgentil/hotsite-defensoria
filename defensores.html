@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Defensores públicos da Defensoria Pública do Estado de Roraima." />
+  <title>Defensores Públicos — Defensoria Pública do Estado de Roraima</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Nunito+Sans:wght@300;400;600;700&family=Blinker:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="defensores-page">
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header class="site-header" role="banner" aria-label="Cabeçalho institucional">
+    <div class="header-inner">
+      <div class="header-logo">
+        <img class="header-logo__brasao" src="img/brasao_dpe.png" alt="" width="572" height="570" aria-hidden="true" />
+        <span class="header-logo__text">Defensoria Pública<br><strong>de Roraima</strong></span>
+      </div>
+      <nav class="header-nav" aria-label="Navegação principal">
+        <a href="index.html#programas">Programas</a>
+        <a href="defensores.html">Defensores</a>
+        <a href="index.html#missao">Missão</a>
+      </nav>
+      <div class="header-badge" aria-label="26 anos">
+        <span class="badge-number">26</span>
+        <span class="badge-label">anos</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="defensores-page__main">
+    <section id="defensores" class="defensores-section" aria-labelledby="defensores-title">
+      <div class="defensores-header">
+        <div class="section-eyebrow">
+          <span class="eyebrow-line" aria-hidden="true"></span>
+          <span class="eyebrow-text">Nossos Agentes</span>
+          <span class="eyebrow-line" aria-hidden="true"></span>
+        </div>
+        <h1 id="defensores-title" class="section-title">Os <em>Defensores</em><br>de Roraima</h1>
+        <p class="section-subtitle">52 profissionais comprometidos com a justiça e a cidadania em todo o estado</p>
+      </div>
+
+      <div class="defensores-grid" role="list" aria-label="Lista de defensores públicos"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo" aria-label="Rodapé institucional">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand__text">
+          <strong>Defensoria Pública</strong>
+          <span>do Estado de Roraima</span>
+        </div>
+      </div>
+      <div class="footer-divider" aria-hidden="true">
+        <img class="footer-divider__logo" src="img/logotipo-defensoria-rr-rodape.png" alt="" width="358" height="133" loading="lazy" />
+      </div>
+      <div class="footer-links">
+        <nav aria-label="Links do rodapé">
+          <h2 class="footer-nav-title">Navegação</h2>
+          <ul>
+            <li><a href="index.html#programas">Programas comemorativos</a></li>
+            <li><a href="defensores.html">Defensores Públicos</a></li>
+            <li><a href="index.html#missao">Nossa missão</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer-nav-title">Contato</h2>
+          <address class="footer-address">
+            <p>Boa Vista, Roraima</p>
+            <p>Brasil</p>
+          </address>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-anniversary" aria-hidden="true">
+        <span class="footer-anni-num">26</span>
+        <span class="footer-anni-text">Anos</span>
+      </div>
+      <p class="footer-copy">
+        &copy; 2026 Defensoria Pública de Roraima. Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
