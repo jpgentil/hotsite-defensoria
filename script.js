@@ -3,119 +3,6 @@
 const GSAP_MAX_RETRIES = 25;
 const GSAP_RETRY_DELAY_MS = 80;
 
-const DEFENSORES = [
-  { nome: 'Ana Paula Ferreira', comarca: 'Boa Vista', iniciais: 'AP' },
-  { nome: 'Bruno Menezes', comarca: 'Boa Vista', iniciais: 'BM' },
-  { nome: 'Carla Nascimento', comarca: 'Caracaraí', iniciais: 'CN' },
-  { nome: 'Daniel Rodrigues', comarca: 'Boa Vista', iniciais: 'DR' },
-  { nome: 'Eliane Monteiro', comarca: 'Alto Alegre', iniciais: 'EM' },
-  { nome: 'Fábio Costa Lima', comarca: 'Boa Vista', iniciais: 'FC' },
-  { nome: 'Graziela Pinheiro', comarca: 'Mucajaí', iniciais: 'GP' },
-  { nome: 'Henrique Barbosa', comarca: 'Boa Vista', iniciais: 'HB' },
-  { nome: 'Isabela Cardoso', comarca: 'Rorainópolis', iniciais: 'IC' },
-  { nome: 'João Paulo Araújo', comarca: 'Boa Vista', iniciais: 'JP' },
-  { nome: 'Kátia Oliveira', comarca: 'Caracaraí', iniciais: 'KO' },
-  { nome: 'Leonardo Sá', comarca: 'Boa Vista', iniciais: 'LS' },
-  { nome: 'Mariana Freitas', comarca: 'Boa Vista', iniciais: 'MF' },
-  { nome: 'Nilton Pereira', comarca: 'Mucajaí', iniciais: 'NP' },
-  { nome: 'Olga Trindade', comarca: 'Boa Vista', iniciais: 'OT' },
-  { nome: 'Paulo Henrique', comarca: 'Alto Alegre', iniciais: 'PH' },
-  { nome: 'Quésia Almeida', comarca: 'Boa Vista', iniciais: 'QA' },
-  { nome: 'Rafael Nogueira', comarca: 'Rorainópolis', iniciais: 'RN' },
-  { nome: 'Sandra Leal', comarca: 'Boa Vista', iniciais: 'SL' },
-  { nome: 'Tiago Mendonça', comarca: 'Caracaraí', iniciais: 'TM' },
-  { nome: 'Ursula Brandão', comarca: 'Boa Vista', iniciais: 'UB' },
-  { nome: 'Vera Cristina', comarca: 'Mucajaí', iniciais: 'VC' },
-  { nome: 'Wagner Souza', comarca: 'Boa Vista', iniciais: 'WS' },
-  { nome: 'Xavier Fonseca', comarca: 'Alto Alegre', iniciais: 'XF' },
-  { nome: 'Yara Campos', comarca: 'Boa Vista', iniciais: 'YC' },
-  { nome: 'Zilda Torres', comarca: 'Rorainópolis', iniciais: 'ZT' },
-  { nome: 'Adriana Moura', comarca: 'Boa Vista', iniciais: 'AM' },
-  { nome: 'Bernardo Lins', comarca: 'Caracaraí', iniciais: 'BL' },
-  { nome: 'Cinthia Guimarães', comarca: 'Boa Vista', iniciais: 'CG' },
-  { nome: 'Diego Vasconcelos', comarca: 'Mucajaí', iniciais: 'DV' },
-  { nome: 'Edna Sampaio', comarca: 'Boa Vista', iniciais: 'ES' },
-  { nome: 'Flávio Ramos', comarca: 'Alto Alegre', iniciais: 'FR' },
-  { nome: 'Gisele Ribeiro', comarca: 'Boa Vista', iniciais: 'GR' },
-  { nome: 'Hugo Cavalcante', comarca: 'Rorainópolis', iniciais: 'HC' },
-  { nome: 'Ingrid Sousa', comarca: 'Boa Vista', iniciais: 'IS' },
-  { nome: 'José Carlos Melo', comarca: 'Caracaraí', iniciais: 'JC' },
-  { nome: 'Larissa Andrade', comarca: 'Boa Vista', iniciais: 'LA' },
-  { nome: 'Marcos Teixeira', comarca: 'Mucajaí', iniciais: 'MT' },
-  { nome: 'Nadia Braga', comarca: 'Boa Vista', iniciais: 'NB' },
-  { nome: 'Oscar Vieira', comarca: 'Alto Alegre', iniciais: 'OV' },
-  { nome: 'Patrícia Leão', comarca: 'Boa Vista', iniciais: 'PL' },
-  { nome: 'Rodrigo Azevedo', comarca: 'Rorainópolis', iniciais: 'RA' },
-  { nome: 'Sílvia Mendes', comarca: 'Boa Vista', iniciais: 'SM' },
-  { nome: 'Thiago Correia', comarca: 'Caracaraí', iniciais: 'TC' },
-  { nome: 'Umberto Freire', comarca: 'Boa Vista', iniciais: 'UF' },
-  { nome: 'Vânia Lustosa', comarca: 'Mucajaí', iniciais: 'VL' },
-  { nome: 'Willian Rocha', comarca: 'Boa Vista', iniciais: 'WR' },
-  { nome: 'Ximena Figueiredo', comarca: 'Alto Alegre', iniciais: 'XI' },
-  { nome: 'Yasmin Duarte', comarca: 'Boa Vista', iniciais: 'YD' },
-  { nome: 'Zuleika Prado', comarca: 'Rorainópolis', iniciais: 'ZP' },
-  { nome: 'Abner Santana', comarca: 'Boa Vista', iniciais: 'AS' },
-  { nome: 'Beatriz Lima', comarca: 'Caracaraí', iniciais: 'BL' },
-];
-
-const NOMES_DEFENSORES = [
-  'DrÂª Alessandra Andrea Miglioranza',
-  'DrÂª Aline DionÃ­sio Castelo Branco',
-  'DrÂª Aline Pereira de Almeida',
-  'DrÂª Andreia Renata Viana VilaÃ§a dos Santos',
-  'DrÂª Anna Elize Fenoll Amaral',
-  'Dr. Antonio Avelino de Almeida Neto',
-  'DrÂª Beatriz Dufflis Fernandes',
-  'Dr. Carlos FabrÃ­cio Ortmeier Ratacheski',
-  'DrÂª Christianne Gonzalez Leite',
-  'DrÂª Elceni Diogo da Silva',
-  'DrÂª Elcianne Viana de Souza',
-  'DrÂª Elisa Rocha Teixeira Netto',
-  'DrÂª Emira Latife L. SalomÃ£o Reis',
-  'Dr. Francisco Francelino de Souza',
-  'Dr. Frederico Cesar LeÃ£o EncarnaÃ§Ã£o',
-  'DrÂª Hannah Larissa De Carvalho Gurgel',
-  'DrÂª InajÃ¡ de Queiroz Maduro',
-  'Dr. Izabela Sedlmaier Souza',
-  'Dr. Jaime Brasil Filho',
-  'Dr. JanuÃ¡rio Miranda Lacerda',
-  'DrÂª Jeane MagalhÃ£es Xaud',
-  'Dr. JosÃ© JoÃ£o Pereira dos Santos',
-  'Dr. JosÃ© Roceliton Vito Joca',
-  'Dr. Julian Silva Barroso',
-  'DrÂª Juliana Gotardo Heinzen',
-  'DrÂª Lenir Rodrigues',
-  'DrÂª Maria das GraÃ§as Barbosa Soares',
-  'Dra. Mariana Ribeiro Lorenzi',
-  'Dra. Mariana FalcÃ£o Bastos Costa',
-  'Dr. Natanael de Lima Ferreira',
-  'DrÂª Nicole Farias Rodrigues',
-  'DrÂª Noelina dos Santos Chaves Lopes',
-  'Dr. Oleno InÃ¡cio de Matos',
-  'DrÂª Paula Regina Pinheiro Castro',
-  'Dr. Rogenilton Ferreira Gomes',
-  'Dr. Ronnie Gabriel Garcia',
-  'DrÂª Rosinha Cardoso Peixoto',
-  'Dr. StÃ©lio Dener de Souza Cruz (Licenciado)',
-  'DrÂª Tatyane Alves Costa',
-  'DrÂª Teresinha Lopes da Silva Azevedo',
-  'DrÂª Terezinha Muniz de Souza Cruz',
-  'Dr. Thaumaturgo Cezar Moreira do Nascimento',
-  'Dr. Vanderlei Oliveira',
-  'Dr. Wagner Silva dos Santos',
-  'Dr. Wallace Rodrigues',
-  'Dr. Wenderson de Sousa Chagas',
-  'Dr. Wilson Roi Leite Da Silva',
-  'Dr. CÃ¡ssio Emanuel',
-  'DrÂª Catarina Lopes Maia',
-  'Dr. Jean Daniel de Almeida Santos',
-  'DrÂª Helen Beatriz Silvano',
-  'DrÂª Sylvia Annabel Soriano',
-];
-
-DEFENSORES.length = 0;
-DEFENSORES.push(...NOMES_DEFENSORES.map((nome) => ({ nome })));
-
 const GRADIENTS = [
   ['#1a3326', '#204931'],
   ['#204931', '#3a8057'],
@@ -185,9 +72,83 @@ document.addEventListener('DOMContentLoaded', () => {
   configurarBotoesCTA();
   configurarLazyGif();
   configurarAcessibilidadeCards();
+  configurarMenuHamburguer();
   iniciarExperiencia();
 });
 
+/* ─── MENU HAMBÚRGUER ─── */
+function configurarMenuHamburguer() {
+  const btn = document.querySelector('.hamburger-btn');
+  const overlay = document.getElementById('nav-overlay');
+
+  if (!btn || !overlay) return;
+
+  const backdrop = overlay.querySelector('.nav-overlay__backdrop');
+  const closeBtn = overlay.querySelector('.nav-overlay__close');
+  const links = overlay.querySelectorAll('.nav-overlay__link');
+
+  function abrirMenu() {
+    btn.setAttribute('aria-expanded', 'true');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    // foco no primeiro link após animação
+    setTimeout(() => {
+      const firstLink = overlay.querySelector('.nav-overlay__link');
+      if (firstLink) firstLink.focus();
+    }, 450);
+  }
+
+  function fecharMenu() {
+    btn.setAttribute('aria-expanded', 'false');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    btn.focus();
+  }
+
+  btn.addEventListener('click', () => {
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    isOpen ? fecharMenu() : abrirMenu();
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', fecharMenu);
+  if (backdrop) backdrop.addEventListener('click', fecharMenu);
+
+  // Fechar ao clicar em link
+  links.forEach((link) => {
+    link.addEventListener('click', fecharMenu);
+  });
+
+  // Fechar com Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') {
+      fecharMenu();
+    }
+  });
+
+  // Trap focus dentro do overlay
+  overlay.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab') return;
+    const focusable = overlay.querySelectorAll(
+      'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    );
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (e.shiftKey) {
+      if (document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      }
+    } else {
+      if (document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  });
+}
+
+/* ─── EXPERIÊNCIA / ANIMAÇÕES ─── */
 function iniciarExperiencia() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     aplicarFallbackSemAnimacao();
@@ -272,7 +233,6 @@ function gerarCards() {
 
 function iniciarAnimacoes() {
   gsap.registerPlugin(ScrollTrigger);
-
   document.documentElement.classList.add('animations-ready');
 
   animarHero();
@@ -280,6 +240,10 @@ function iniciarAnimacoes() {
   animarDefensores();
   animarFrase();
   animarHeader();
+  animarSectionTexto();
+  animarSectionHistoria();
+  animarSectionSolidaria();
+  animarDefensoresCTA();
 }
 
 function animarHero() {
@@ -310,6 +274,36 @@ function animarHero() {
   });
 }
 
+function animarSectionTexto() {
+  const section = document.querySelector('.texto-abertura-section');
+  if (!section) return;
+
+  gsap.from('.texto-abertura__inner', {
+    opacity: 0,
+    y: 40,
+    duration: 1,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: section,
+      start: 'top 75%',
+      once: true,
+    }
+  });
+
+  gsap.from('.texto-abertura__body p', {
+    opacity: 0,
+    y: 20,
+    duration: 0.7,
+    stagger: 0.15,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: section,
+      start: 'top 65%',
+      once: true,
+    }
+  });
+}
+
 function animarProgramas() {
   document.querySelectorAll('.program-section').forEach((section) => {
     const body = section.querySelector('.program-section__body');
@@ -328,64 +322,85 @@ function animarProgramas() {
     }
 
     if (deco) {
-      gsap.fromTo(deco, {
-        x: 80,
-        opacity: 0,
-      }, {
-        x: 0,
-        opacity: 1,
-        duration: 1.4,
-        ease: 'expo.out',
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 80%',
-          once: true,
-        }
+      gsap.fromTo(deco, { x: 80, opacity: 0 }, {
+        x: 0, opacity: 1, duration: 1.4, ease: 'expo.out',
+        scrollTrigger: { trigger: section, start: 'top 80%', once: true }
       });
     }
 
     const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: section,
-        start: 'top 70%',
-        once: true,
-      },
+      scrollTrigger: { trigger: section, start: 'top 70%', once: true },
       onComplete: () => {
         body?.removeAttribute('data-gsap-hidden');
         visual?.removeAttribute('data-gsap-hidden');
       }
     });
 
-    if (body) {
-      tl.to(body, {
-        opacity: 1,
-        x: 0,
-        duration: 0.9,
-        ease: 'power3.out',
-      });
-    }
-
-    if (visual) {
-      tl.to(visual, {
-        opacity: 1,
-        x: 0,
-        duration: 0.9,
-        ease: 'power3.out',
-      }, '-=0.5');
-    }
+    if (body) tl.to(body, { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out' });
+    if (visual) tl.to(visual, { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out' }, '-=0.5');
 
     if (decoWrapper) {
       gsap.to(decoWrapper, {
-        y: -60,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: section,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: 1,
-        }
+        y: -60, ease: 'none',
+        scrollTrigger: { trigger: section, start: 'top bottom', end: 'bottom top', scrub: 1 }
       });
     }
+  });
+}
+
+function animarSectionSolidaria() {
+  const section = document.querySelector('.defensoria-solidaria-section');
+  if (!section) return;
+
+  gsap.from('.defensoria-solidaria__inner', {
+    opacity: 0,
+    y: 30,
+    duration: 0.9,
+    ease: 'power3.out',
+    scrollTrigger: { trigger: section, start: 'top 75%', once: true }
+  });
+}
+
+function animarSectionHistoria() {
+  const section = document.querySelector('.historia-section');
+  if (!section) return;
+
+  gsap.from('.historia__deco-num', {
+    opacity: 0,
+    x: -40,
+    duration: 1.2,
+    ease: 'expo.out',
+    scrollTrigger: { trigger: section, start: 'top 80%', once: true }
+  });
+
+  gsap.from('.historia__title', {
+    opacity: 0,
+    y: 30,
+    duration: 0.9,
+    ease: 'power3.out',
+    scrollTrigger: { trigger: section, start: 'top 75%', once: true }
+  });
+
+  gsap.from('.historia__body p', {
+    opacity: 0,
+    y: 18,
+    duration: 0.65,
+    stagger: 0.12,
+    ease: 'power2.out',
+    scrollTrigger: { trigger: section, start: 'top 65%', once: true }
+  });
+}
+
+function animarDefensoresCTA() {
+  const section = document.querySelector('.defensores-cta-section');
+  if (!section) return;
+
+  gsap.from('.defensores-cta__inner', {
+    opacity: 0,
+    y: 30,
+    duration: 0.9,
+    ease: 'power3.out',
+    scrollTrigger: { trigger: section, start: 'top 75%', once: true }
   });
 }
 
@@ -403,17 +418,15 @@ function animarDefensores() {
   });
 
   const cards = document.querySelectorAll('.defensor-card');
+  if (!cards.length) return;
+
   gsap.set(cards, { opacity: 0, y: 20 });
   cards.forEach((card) => card.setAttribute('data-gsap-hidden', 'true'));
 
   ScrollTrigger.batch(cards, {
     onEnter: (batch) => {
       gsap.to(batch, {
-        opacity: 1,
-        y: 0,
-        duration: 0.6,
-        stagger: 0.07,
-        ease: 'power2.out',
+        opacity: 1, y: 0, duration: 0.6, stagger: 0.07, ease: 'power2.out',
         onComplete: () => batch.forEach((card) => card.removeAttribute('data-gsap-hidden')),
       });
     },
@@ -430,53 +443,24 @@ function animarFrase() {
   }
 
   gsap.to('.frase-quote p', {
-    opacity: 1,
-    y: 0,
-    duration: 1.1,
-    ease: 'power3.out',
-    scrollTrigger: {
-      trigger: '.frase-section',
-      start: 'top 65%',
-      once: true,
-    },
+    opacity: 1, y: 0, duration: 1.1, ease: 'power3.out',
+    scrollTrigger: { trigger: '.frase-section', start: 'top 65%', once: true },
     onComplete: () => quote?.removeAttribute('data-gsap-hidden'),
   });
 
   gsap.from('.frase-aspas--open', {
-    x: -30,
-    opacity: 0,
-    duration: 1,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: '.frase-section',
-      start: 'top 70%',
-      once: true,
-    }
+    x: -30, opacity: 0, duration: 1, ease: 'power2.out',
+    scrollTrigger: { trigger: '.frase-section', start: 'top 70%', once: true }
   });
 
   gsap.from('.frase-aspas--close', {
-    x: 30,
-    opacity: 0,
-    duration: 1,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: '.frase-section',
-      start: 'top 70%',
-      once: true,
-    }
+    x: 30, opacity: 0, duration: 1, ease: 'power2.out',
+    scrollTrigger: { trigger: '.frase-section', start: 'top 70%', once: true }
   });
 
   gsap.from('.ornamento-linha, .ornamento-rombo', {
-    scaleX: 0,
-    opacity: 0,
-    duration: 0.8,
-    stagger: 0.1,
-    ease: 'power3.out',
-    scrollTrigger: {
-      trigger: '.frase-section',
-      start: 'top 70%',
-      once: true,
-    }
+    scaleX: 0, opacity: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out',
+    scrollTrigger: { trigger: '.frase-section', start: 'top 70%', once: true }
   });
 }
 
@@ -491,6 +475,7 @@ function animarHeader() {
   });
 }
 
+/* ─── SMOOTH SCROLL ─── */
 document.addEventListener('click', (e) => {
   const anchor = e.target.closest('a[href^="#"]');
   if (!anchor) return;
@@ -513,8 +498,9 @@ document.addEventListener('click', (e) => {
   window.scrollTo({ top, behavior: 'smooth' });
 });
 
+/* ─── BOTÕES CTA ─── */
 function configurarBotoesCTA() {
-  const ctaButtons = document.querySelectorAll('.hero__cta, .program-cta');
+  const ctaButtons = document.querySelectorAll('.hero__cta, .program-cta, .defensores-cta__btn');
 
   ctaButtons.forEach((btn) => {
     btn.addEventListener('mouseenter', () => {
@@ -551,11 +537,7 @@ function configurarLazyGif() {
     if (!gif) return;
 
     let gifLoaded = false;
-
-    const carregarGif = () => {
-      if (gifLoaded) return;
-      gifLoaded = true;
-    };
+    const carregarGif = () => { gifLoaded = true; };
 
     card.addEventListener('mouseenter', carregarGif, { once: true });
     card.addEventListener('focus', carregarGif, { once: true });

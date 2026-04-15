@@ -18,6 +18,40 @@
 <body>
   <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
+  <!-- ─── MENU HAMBÚRGUER OVERLAY ─── -->
+  <button class="hamburger-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-overlay">
+    <span class="hamburger-btn__line"></span>
+    <span class="hamburger-btn__line"></span>
+    <span class="hamburger-btn__line"></span>
+  </button>
+
+  <nav id="nav-overlay" class="nav-overlay" aria-label="Menu principal" aria-hidden="true">
+    <div class="nav-overlay__backdrop"></div>
+    <div class="nav-overlay__panel">
+      <div class="nav-overlay__header">
+        <span class="nav-overlay__eyebrow">Defensoria Pública · 26 Anos</span>
+        <button class="nav-overlay__close" aria-label="Fechar menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M3 3l14 14M17 3L3 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <ul class="nav-overlay__list" role="list">
+        <li><a href="#texto-abertura" class="nav-overlay__link"><span class="nav-overlay__num">01</span><span class="nav-overlay__label">Início</span></a></li>
+        <li><a href="#carreta" class="nav-overlay__link"><span class="nav-overlay__num">02</span><span class="nav-overlay__label">Carreta dos Direitos</span></a></li>
+        <li><a href="#casamento" class="nav-overlay__link"><span class="nav-overlay__num">03</span><span class="nav-overlay__label">Enfim Casados</span></a></li>
+        <li><a href="#corrida" class="nav-overlay__link"><span class="nav-overlay__num">04</span><span class="nav-overlay__label">Corrida dos 26 Anos</span></a></li>
+        <li><a href="#defensoria-solidaria" class="nav-overlay__link"><span class="nav-overlay__num">05</span><span class="nav-overlay__label">Defensoria Solidária</span></a></li>
+        <li><a href="#historia" class="nav-overlay__link"><span class="nav-overlay__num">06</span><span class="nav-overlay__label">A História da Defensoria</span></a></li>
+        <li><a href="#defensores" class="nav-overlay__link"><span class="nav-overlay__num">07</span><span class="nav-overlay__label">Defensores</span></a></li>
+        <li><a href="#missao" class="nav-overlay__link"><span class="nav-overlay__num">08</span><span class="nav-overlay__label">Missão</span></a></li>
+      </ul>
+      <div class="nav-overlay__footer">
+        <span>Boa Vista · Roraima · Brasil</span>
+      </div>
+    </div>
+  </nav>
+
   <header class="site-header" role="banner" aria-label="Cabeçalho institucional">
     <div class="header-inner">
       <div class="header-logo">
@@ -37,6 +71,8 @@
   </header>
 
   <main id="main-content">
+
+    <!-- ─── HERO ─── -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__video-wrap" aria-hidden="true">
         <video
@@ -71,7 +107,7 @@
 
         <p class="hero__tagline">Duas décadas e meia de justiça, cidadania e dignidade humana</p>
 
-        <a href="#programas" class="hero__cta" aria-label="Ver programas comemorativos">
+        <a href="#texto-abertura" class="hero__cta" aria-label="Ver programas comemorativos">
           <span>Celebre conosco</span>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
             <path d="M10 3v14M3 10l7 7 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -85,8 +121,31 @@
       </div>
     </section>
 
+    <!-- ─── TEXTO DE ABERTURA ─── -->
+    <section id="texto-abertura" class="texto-abertura-section" aria-labelledby="abertura-title">
+      <div class="texto-abertura__inner">
+        <div class="section-eyebrow">
+          <span class="eyebrow-line" aria-hidden="true"></span>
+          <span class="eyebrow-text">26 Anos · 2000 — 2026</span>
+          <span class="eyebrow-line" aria-hidden="true"></span>
+        </div>
+        <h2 id="abertura-title" class="texto-abertura__title">
+          26 anos de história contados por quem <em>vive de perto</em>
+        </h2>
+        <div class="texto-abertura__body">
+          <p>26 anos de história contados por quem vive de perto cada atendimento, cada orientação, cada porta que se abre.</p>
+          <p>Este espaço nasce para guardar o que a gente construiu até aqui. Há lembranças de estradas, de comunidades, de salas cheias, de gente que chegou sem saber por onde começar e saiu com um caminho. Há também o olhar de defensoras e defensores, servidoras e servidores, e de quem encontrou na Defensoria um apoio de verdade.</p>
+          <p>Roraima é feita de encontros. E a Defensoria também. Entre bairros, vilas, comunidades indígenas e o centro da cidade, o que une tudo isso são pessoas e histórias que seguem em movimento.</p>
+          <p class="texto-abertura__destaque">E essa história não para aqui. Ainda tem muita vida acontecendo dentro dela.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PROGRAMAS ─── -->
     <div id="programas" class="programs-container">
-      <section class="program-section program-section--corrida" aria-labelledby="corrida-title">
+
+      <!-- Carreta dos Direitos -->
+      <section id="carreta" class="program-section program-section--carreta" aria-labelledby="carreta-title">
         <div class="program-section__deco" aria-hidden="true">
           <div class="deco-roman">I</div>
         </div>
@@ -96,53 +155,13 @@
             <span class="program-num">01</span>
           </div>
           <div class="program-section__body">
-            <h2 id="corrida-title" class="program-title">
-              <em>Corrida</em><br>dos 26 Anos
-            </h2>
-            <div class="program-divider" aria-hidden="true"></div>
-            <p class="program-desc">
-            A Corrida dos 26 Anos coloca Boa Vista em movimento e vira um ponto de encontro para quem gosta de se mexer ou só quer viver a cidade de um jeito diferente. Nesta 7ª edição da corrida de adultos e 3ª da Corridinha Kids, tem espaço pra todo mundo, com percurso pensado para quem corre, caminha ou vai com a família.
-            A programação acontece no dia 7 de junho de 2026, no Parque Anauá, a partir das 17h. E este espaço vai sendo atualizado aos poucos, com o croqui do percurso, o link de inscrição e outras informações que ajudam os participantes a se organizar com antecedência.
-            Depois que tudo acontecer, as fotos também estarão disponíveis aqui. Enquanto isso, dá pra ir entrando no clima com os registros da edição passada e já sentir como esse momento movimenta a cidade e reúne tanta gente.            </p>
-            <a href="#" class="program-cta" aria-label="Saiba mais sobre a Corrida dos 26 anos">
-              <span>Saiba mais</span>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
-          </div>
-          <div class="program-section__visual" aria-hidden="true">
-            <div class="program-visual-frame">
-              <div class="program-visual-inner program-visual-inner--corrida">
-                <div class="visual-number">26</div>
-                <div class="visual-label">km simbólicos</div>
-                <div class="visual-ornament"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="program-section program-section--carreta" aria-labelledby="carreta-title">
-        <div class="program-section__deco" aria-hidden="true">
-          <div class="deco-roman">II</div>
-        </div>
-        <div class="program-section__inner">
-          <div class="program-section__meta">
-            <span class="program-tag">Programa</span>
-            <span class="program-num">02</span>
-          </div>
-          <div class="program-section__body">
             <h2 id="carreta-title" class="program-title">
               <em>Carreta</em><br>dos Direitos
             </h2>
             <div class="program-divider" aria-hidden="true"></div>
             <p class="program-desc">
-              Desde 2024, a Carreta dos Direitos cruza Roraima e leva a Defensoria para perto das pessoas. Já passou por várias cidades, bairros e comunidades, chegando onde o atendimento não faz parte da rotina.
-              Todo mês, ela para em uma nova localidade. Em cada lugar, vira referência para quem precisa resolver algo que ficou parado por falta de acesso ou informação.
-              Só em 2025, foram mais de 231 mil atendimentos em todo o estado, muitos deles com a presença da carreta, que ajuda a ampliar esse alcance.
-              Dentro dela, muita gente consegue tirar documentos, buscar orientação e dar andamento em situações importantes da vida.
-              Quando a carreta chega, muda o dia de quem estava esperando uma solução.            </p>
+              A justiça que chega onde o cidadão está. Nossa carreta itinerante leva assistência jurídica gratuita às comunidades mais vulneráveis de Roraima, levando dignidade e acesso à lei a todos os rincões do estado.
+            </p>
             <a href="#" class="program-cta" aria-label="Saiba mais sobre a Carreta dos Direitos">
               <span>Saiba mais</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -167,14 +186,15 @@
         </div>
       </section>
 
-      <section class="program-section program-section--casamento" aria-labelledby="casamento-title">
+      <!-- Enfim Casados -->
+      <section id="casamento" class="program-section program-section--casamento" aria-labelledby="casamento-title">
         <div class="program-section__deco" aria-hidden="true">
-          <div class="deco-roman">III</div>
+          <div class="deco-roman">II</div>
         </div>
         <div class="program-section__inner">
           <div class="program-section__meta">
             <span class="program-tag">Programa</span>
-            <span class="program-num">03</span>
+            <span class="program-num">02</span>
           </div>
           <div class="program-section__body">
             <h2 id="casamento-title" class="program-title">
@@ -182,12 +202,9 @@
             </h2>
             <div class="program-divider" aria-hidden="true"></div>
             <p class="program-desc">
-            O projeto Enfim, casados! nasceu para garantir algo que muita gente já vive há anos, mas ainda não tinha no papel. Casais que construíram uma vida juntos passam a ter a união reconhecida, com direitos assegurados e mais segurança para seguir.
-            Em Roraima, a iniciativa já alcançou centenas de famílias. Em Boa Vista, a cada edição, novos casais conseguem oficializar a união e resolver pendências que ficam travadas sem o registro civil.
-            Na edição dos 26 anos, o projeto chega à 4ª edição em Boa Vista, com a previsão de reunir até 270 casais. A cerimônia será no Mirante Edileusa Lóz, na Orla Taumanan, uma parceria da PMBV, em um dos pontos mais conhecidos da cidade, que passa a abrigar histórias que começam um novo capítulo.
-            A ação conta com o apoio da Corregedoria-Geral de Justiça e da Justiça Itinerante do Tribunal de Justiça de Roraima, além dos cartórios do 1º Ofício Loureiro e do 2º Ofício Nathalia Lago, que atuam em cada etapa para garantir que tudo aconteça de forma gratuita e organizada.
-            Com o documento em mãos, os casais passam a ter acesso a direitos que fazem diferença na vida prática, como inclusão em benefícios, regularização de bens e segurança nas decisões da família.            </p>
-            <a href="#" class="program-cta" aria-label="Saiba mais sobre o Casamento Coletivo">
+              Amor e cidadania unidos em um só ato. O Casamento Coletivo da Defensoria formaliza uniões e garante direitos a casais que aguardavam esse momento, celebrando a dignidade de cada família roraimense.
+            </p>
+            <a href="#" class="program-cta" aria-label="Saiba mais sobre o Enfim Casados">
               <span>Saiba mais</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -208,23 +225,105 @@
           </div>
         </div>
       </section>
-    </div>
 
-    <section id="defensores" class="defensores-section" aria-labelledby="defensores-title">
-      <div class="defensores-header">
+      <!-- Corrida dos 26 Anos -->
+      <section id="corrida" class="program-section program-section--corrida" aria-labelledby="corrida-title">
+        <div class="program-section__deco" aria-hidden="true">
+          <div class="deco-roman">III</div>
+        </div>
+        <div class="program-section__inner">
+          <div class="program-section__meta">
+            <span class="program-tag">Programa</span>
+            <span class="program-num">03</span>
+          </div>
+          <div class="program-section__body">
+            <h2 id="corrida-title" class="program-title">
+              <em>Corrida</em><br>dos 26 Anos
+            </h2>
+            <div class="program-divider" aria-hidden="true"></div>
+            <p class="program-desc">
+              Uma corrida que une comunidade, saúde e celebração. Vinte e seis quilômetros simbólicos percorridos por defensores, servidores e cidadãos, traçando juntos os caminhos da justiça pela cidade de Boa Vista.
+            </p>
+            <a href="#" class="program-cta" aria-label="Saiba mais sobre a Corrida dos 26 anos">
+              <span>Saiba mais</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+          <div class="program-section__visual" aria-hidden="true">
+            <div class="program-visual-frame">
+              <div class="program-visual-inner program-visual-inner--corrida">
+                <div class="visual-number">26</div>
+                <div class="visual-label">km simbólicos</div>
+                <div class="visual-ornament"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /.programs-container -->
+
+    <!-- ─── DEFENSORIA SOLIDÁRIA ─── -->
+    <section id="defensoria-solidaria" class="defensoria-solidaria-section" aria-labelledby="solidaria-title">
+      <div class="defensoria-solidaria__inner">
+        <div class="section-eyebrow">
+          <span class="eyebrow-line" aria-hidden="true"></span>
+          <span class="eyebrow-text">Programa</span>
+          <span class="eyebrow-line" aria-hidden="true"></span>
+        </div>
+        <h2 id="solidaria-title" class="section-title">Defensoria <em>Solidária</em></h2>
+        <p class="section-subtitle">Em breve</p>
+      </div>
+    </section>
+
+    <!-- ─── A HISTÓRIA DA DEFENSORIA ─── -->
+    <section id="historia" class="historia-section" aria-labelledby="historia-title">
+      <div class="historia__inner">
+        <div class="historia__deco-num" aria-hidden="true">26</div>
+        <div class="historia__content">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line" aria-hidden="true"></span>
+            <span class="eyebrow-text">Memória Institucional</span>
+            <span class="eyebrow-line" aria-hidden="true"></span>
+          </div>
+          <h2 id="historia-title" class="historia__title">A história da <em>Defensoria</em></h2>
+          <div class="historia__body">
+            <p>A história da Defensoria em Roraima começou antes mesmo de ter esse nome. Lá pelos anos 80, um pequeno setor já atendia quem precisava de orientação jurídica. Era o começo de algo que só cresceu.</p>
+            <p>Com a Constituição de 1988, esse trabalho virou direito garantido. Em 2000, a Defensoria Pública de Roraima foi oficialmente criada e, desde então foi crescendo, ganhando forma, equipe, presença e força em todo o estado.</p>
+            <p>Hoje, está nas comarcas e também chega onde muitas vezes ninguém chega. Vai até bairros, vilas e comunidades, levando informação e abrindo caminhos para quem precisa resolver a vida.</p>
+            <div class="historia__divider" aria-hidden="true"></div>
+            <p>Esse hotsite reúne um pouco dessa caminhada. Histórias reais, de gente que faz e de gente que encontrou na Defensoria um lugar pra respirar. Tudo de um jeito simples, como sempre foi por aqui.</p>
+            <p>Dá uma olhada no que tem por aqui. Cada seção conta um pedaço dessa história.</p>
+            <p class="historia__destaque">Quem fala são as próprias pessoas.</p>
+            <p>Histórias de quem chegou com uma dúvida, um problema, às vezes sem saber por onde começar. E encontrou escuta, orientação e caminho. Cada vídeo, cada relato, mostra o que acontece quando o direito deixa de ser distante e passa a fazer parte da vida de verdade.</p>
+            <p>É nesse encontro que as coisas mudam. E é isso que você vai ver.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── DEFENSORES (CTA) ─── -->
+    <section id="defensores" class="defensores-cta-section" aria-labelledby="defensores-cta-title">
+      <div class="defensores-cta__inner">
         <div class="section-eyebrow">
           <span class="eyebrow-line" aria-hidden="true"></span>
           <span class="eyebrow-text">Nossos Agentes</span>
           <span class="eyebrow-line" aria-hidden="true"></span>
         </div>
-        <h2 id="defensores-title" class="section-title">Os <em>Defensores</em><br>de Roraima</h2>
+        <h2 id="defensores-cta-title" class="section-title">Os <em>Defensores</em><br>de Roraima</h2>
         <p class="section-subtitle">52 profissionais comprometidos com a justiça e a cidadania em todo o estado</p>
-      </div>
-
-      <div class="defensores-grid" role="list" aria-label="Lista de defensores públicos">
+        <a href="defensores.html" class="defensores-cta__btn" aria-label="Ver todos os defensores públicos de Roraima">
+          <span>Conheça os defensores</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
       </div>
     </section>
 
+    <!-- ─── FRASE INSTITUCIONAL ─── -->
     <section id="missao" class="frase-section" aria-labelledby="frase-title">
       <div class="frase-ornamento" aria-hidden="true">
         <div class="ornamento-topo">
@@ -253,6 +352,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer" role="contentinfo" aria-label="Rodapé institucional">
@@ -271,7 +371,7 @@
           <h3 class="footer-nav-title">Navegação</h3>
           <ul>
             <li><a href="#programas">Programas comemorativos</a></li>
-            <li><a href="#defensores">Defensores Públicos</a></li>
+            <li><a href="defensores.html">Defensores Públicos</a></li>
             <li><a href="#missao">Nossa missão</a></li>
           </ul>
         </nav>
