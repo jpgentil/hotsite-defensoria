@@ -300,12 +300,11 @@ a { text-decoration: none; color: inherit; }
 }
 
 .header-inner {
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: space-between;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   height: 100%;
-  padding: 0 var(--body-padding);
-  padding-left: calc(var(--body-padding) + 60px); /* espaço p/ botão hamburger */
+  padding-inline: var(--body-padding);
   gap: 2rem;
 }
 
@@ -313,6 +312,8 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  justify-self: start;
+  min-width: 0;
 }
 
 .header-logo__brasao {
@@ -343,6 +344,8 @@ a { text-decoration: none; color: inherit; }
 .header-nav {
   display: flex;
   gap: 2rem;
+  justify-self: center;
+  white-space: nowrap;
 }
 
 .header-nav a {
@@ -380,6 +383,12 @@ a { text-decoration: none; color: inherit; }
   padding: 0.25rem 0.75rem;
   border-radius: 3px;
   line-height: 1;
+  justify-self: end;
+}
+
+.hamburger-btn ~ .site-header .header-inner {
+  padding-left: calc(var(--body-padding) + 60px);
+  padding-right: calc(var(--body-padding) + 60px);
 }
 
 .badge-number {
@@ -397,10 +406,30 @@ a { text-decoration: none; color: inherit; }
   margin-top: -2px;
 }
 
+@media (max-width: 1024px) {
+  .header-inner { gap: 1rem; }
+  .header-nav { gap: 1.25rem; }
+  .header-nav a {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+@media (max-width: 860px) {
+  .header-logo__text { display: none; }
+}
+
 @media (max-width: 768px) {
   .header-nav { display: none; }
-  .header-logo__text { display: none; }
-  .header-inner { padding-left: 70px; }
+  .header-inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding-inline: var(--body-padding);
+  }
+
+  .hamburger-btn ~ .site-header .header-inner {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
 }
 
 

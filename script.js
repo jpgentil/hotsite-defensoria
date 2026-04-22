@@ -67,6 +67,61 @@ const DEFENSORES_NOMES = [
   { nome: 'Dra Sylvia Annabel Soriano' },
 ];
 
+const DEFENSORES_FOTOS = [
+  'Defensor-01.jpg',
+  'Defensor-02.jpg',
+  'Defensor-03.jpg',
+  'Defensor-04.jpg',
+  'Defensor-05.jpg',
+  'Defensor-06.jpg',
+  'Defensor-07.jpg',
+  'Defensor-08.jpg',
+  'Defensor-09.jpg',
+  'Defensor-10.jpg',
+  'Defensor-11.jpg',
+  'Defensor-12.jpg',
+  'Defensor-13.jpg',
+  'Defensor-14.jpg',
+  'Defensor-15.jpg',
+  'Defensor-16.jpg',
+  'Defensor-17.jpg',
+  'Defensor-18.jpg',
+  'Defensor-19.png',
+  'Defensor-20.jpg',
+  'Defensor-21.jpg',
+  'Defensor-22.jpg',
+  'Defensor-23.jpg',
+  'Defensor-24.jpg',
+  'Defensor-25.jpg',
+  'Defensor-26.jpg',
+  'Defensor-27.jpg',
+  'Defensor-28.jpeg',
+  'Defensor-29.jpg',
+  'Defensor-30.jpg',
+  'Defensor-31.jpg',
+  'Defensor-32.jpg',
+  'Defensor-33.jpg',
+  'Defensor-34.jpeg',
+  'Defensor-35.jpeg',
+  'Defensor-36.jpg',
+  'Defensor-37.jpg',
+  'Defensor-38.jpg',
+  'Defensor-39.jpg',
+  'Defensor-40.jpg',
+  'Defensor-41.jpg',
+  'Defensor-42.jpg',
+  'Defensor-43.jpg',
+  'Defensor-44.jpg',
+  'Defensor-45.jpg',
+  'Defensor-46.jpg',
+  'Defensor-47.jpg',
+  'Defensor-48.jpg',
+  'Defensor-49.jpg',
+  'Defensor-50.jpg',
+  'Defensor-51.jpg',
+  'Defensor-52.jpg',
+];
+
 document.addEventListener('DOMContentLoaded', () => {
   gerarCards();
   configurarBotoesCTA();
@@ -188,6 +243,7 @@ function gerarCards() {
   DEFENSORES_NOMES.forEach((def, idx) => {
     const grad = GRADIENTS[idx % GRADIENTS.length];
     const numero = String(idx + 1).padStart(2, '0');
+    const foto = DEFENSORES_FOTOS[idx] || `Defensor-${numero}.jpg`;
     const article = document.createElement('article');
 
     article.className = 'defensor-card';
@@ -202,7 +258,7 @@ function gerarCards() {
         </div>
         <img
           class="defensor-card__img"
-          src="img/defensores/defensor-${numero}.jpg"
+          src="img/defensores/${foto}"
           alt=""
           loading="lazy"
           onerror="this.style.display='none'"
@@ -210,7 +266,7 @@ function gerarCards() {
         />
         <img
           class="defensor-card__gif"
-          src="img/defensores/defensor-${numero}.gif"
+          src="img/defensores/Defensor-${numero}.gif"
           alt=""
           loading="lazy"
           onerror="this.style.display='none'"
