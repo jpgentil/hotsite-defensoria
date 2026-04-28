@@ -1706,6 +1706,11 @@ a { text-decoration: none; color: inherit; }
   padding-bottom: 2rem;
 }
 
+.page-highlights .section-title,
+.page-timeline .section-title {
+  color: var(--primary-color);
+}
+
 .page-highlights__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
