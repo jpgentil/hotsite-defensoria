@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Corrida dos 26 Anos — evento comemorativo da Defensoria Pública de Roraima." />
+  <title>Corrida dos 26 Anos — Defensoria Pública do Estado de Roraima</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Nunito+Sans:wght@300;400;600;700&family=Blinker:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body id="top" class="inner-page" data-asset-prefix="../">
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <button class="hamburger-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-overlay">
+    <span class="hamburger-btn__line"></span>
+    <span class="hamburger-btn__line"></span>
+    <span class="hamburger-btn__line"></span>
+  </button>
+
+  <nav id="nav-overlay" class="nav-overlay" aria-label="Menu principal" aria-hidden="true">
+    <div class="nav-overlay__backdrop"></div>
+    <div class="nav-overlay__panel">
+      <div class="nav-overlay__header">
+        <span class="nav-overlay__eyebrow">Defensoria Pública · 26 Anos</span>
+        <button class="nav-overlay__close" aria-label="Fechar menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M3 3l14 14M17 3L3 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+      <ul class="nav-overlay__list" role="list">
+        <li><a href="../index.html#texto-abertura" class="nav-overlay__link"><span class="nav-overlay__num">01</span><span class="nav-overlay__label">Início</span></a></li>
+        <li><a href="carretadireitos.html" class="nav-overlay__link"><span class="nav-overlay__num">02</span><span class="nav-overlay__label">Carreta dos Direitos</span></a></li>
+        <li><a href="enfimcasados.html" class="nav-overlay__link"><span class="nav-overlay__num">03</span><span class="nav-overlay__label">Enfim Casados</span></a></li>
+        <li><a href="corrida26.html" class="nav-overlay__link"><span class="nav-overlay__num">04</span><span class="nav-overlay__label">Corrida dos 26 Anos</span></a></li>
+        <li><a href="defsolidaria.html" class="nav-overlay__link"><span class="nav-overlay__num">05</span><span class="nav-overlay__label">Defensoria Solidária</span></a></li>
+        <li><a href="../index.html#historia" class="nav-overlay__link"><span class="nav-overlay__num">06</span><span class="nav-overlay__label">A História da Defensoria</span></a></li>
+        <li><a href="defensores.html" class="nav-overlay__link"><span class="nav-overlay__num">07</span><span class="nav-overlay__label">Defensores</span></a></li>
+        <li><a href="../index.html#missao" class="nav-overlay__link"><span class="nav-overlay__num">08</span><span class="nav-overlay__label">Missão</span></a></li>
+      </ul>
+      <div class="nav-overlay__footer">
+        <span>Boa Vista · Roraima · Brasil</span>
+      </div>
+    </div>
+  </nav>
+
+  <header class="site-header" role="banner" aria-label="Cabeçalho institucional">
+    <div class="header-inner">
+      <a class="header-logo" href="../index.html#top" aria-label="Voltar ao início do site">
+        <img class="header-logo__brasao" src="../img/brasao_dpe.png" alt="" aria-hidden="true" />
+        <span class="header-logo__text">Defensoria Pública<br /><strong>de Roraima</strong></span>
+      </a>
+      <nav class="header-nav" aria-label="Navegação principal">
+        <a href="../index.html#programas">Programas</a>
+        <a href="defensores.html">Defensores</a>
+        <a href="../index.html#missao">Missão</a>
+      </nav>
+      <div class="header-badge" aria-label="26 anos">
+        <span class="badge-number">26</span>
+        <span class="badge-label">anos</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="inner-page__main">
+    <section class="inner-hero" aria-labelledby="corrida-title">
+      <div class="inner-hero__layout">
+        <div class="inner-hero__content">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line" aria-hidden="true"></span>
+            <span class="eyebrow-text">Programa 03 · Boa Vista em Movimento</span>
+          </div>
+          <h1 id="corrida-title" class="inner-hero__title"><em>Corrida</em><br />dos 26 Anos</h1>
+          <p class="inner-hero__lead">A Corrida dos 26 Anos se consolida como ponto de encontro para quem quer correr, caminhar, levar a família e viver a cidade a partir de um evento aberto e simbólico.</p>
+          <div class="inner-hero__actions">
+            <a href="#conteudo" class="page-cta">
+              <span>Ler conteúdo</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="../index.html#programas" class="page-cta">
+              <span>Voltar à home</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="inner-hero__media" aria-hidden="true">
+          <img src="../img/corrida_def.jpg" alt="" />
+          <div class="inner-hero__media-inner">
+            <span class="inner-hero__kicker">Evento comemorativo</span>
+            <p class="inner-hero__caption">Uma programação pensada para quem corre, caminha ou acompanha em família o aniversário da instituição.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="conteudo" class="page-story" aria-labelledby="corrida-story-title">
+      <div class="page-story__layout">
+        <div class="page-story__content">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line" aria-hidden="true"></span>
+            <span class="eyebrow-text">O Evento</span>
+          </div>
+          <h2 id="corrida-story-title" class="section-title">Um encontro esportivo que celebra <em>presença pública</em></h2>
+          <p>A Corrida dos 26 Anos coloca Boa Vista em movimento e se torna um ponto de encontro para quem gosta de se exercitar ou simplesmente quer viver a cidade de um jeito diferente.</p>
+          <p>Nesta 7ª edição da corrida adulta e 3ª da Corridinha Kids, há espaço para todo mundo, com percurso pensado para quem corre, caminha ou vem com a família.</p>
+          <p>A programação acontece no dia 7 de junho de 2026, no Parque Anauá, a partir das 17h. O evento reúne esporte, comemoração institucional e convivência em torno de uma agenda acessível e aberta.</p>
+          <p>Este espaço será atualizado com o croqui do percurso, o link de inscrição e outras informações para quem quiser se organizar com antecedência. Após o evento, as fotos também estarão disponíveis aqui.</p>
+          <p class="texto-abertura__destaque">Enquanto isso, os registros da edição anterior já ajudam a antecipar a energia de um encontro que mobiliza a cidade.</p>
+        </div>
+        <aside class="page-panel" aria-labelledby="corrida-panel-title">
+          <h2 id="corrida-panel-title" class="page-panel__title">Pontos-chave</h2>
+          <ul class="page-panel__list">
+            <li><span class="page-panel__eyebrow">Data</span><span class="page-panel__text">7 de junho de 2026.</span></li>
+            <li><span class="page-panel__eyebrow">Horário</span><span class="page-panel__text">A partir das 17h.</span></li>
+            <li><span class="page-panel__eyebrow">Local</span><span class="page-panel__text">Parque Anauá, em Boa Vista.</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page-highlights" aria-labelledby="corrida-highlights-title">
+      <div class="section-eyebrow">
+        <span class="eyebrow-line" aria-hidden="true"></span>
+        <span class="eyebrow-text">Estrutura</span>
+        <span class="eyebrow-line" aria-hidden="true"></span>
+      </div>
+      <h2 id="corrida-highlights-title" class="section-title">O que esta página passa a concentrar</h2>
+      <div class="page-highlights__grid">
+        <article class="page-highlights__card">
+          <h3>Programação</h3>
+          <p>Horários, informações de apoio e contexto do evento ficam organizados em um único lugar.</p>
+        </article>
+        <article class="page-highlights__card">
+          <h3>Inscrição e percurso</h3>
+          <p>O croqui e o link de inscrição podem ser atualizados aqui sem depender de novos blocos dentro da home.</p>
+        </article>
+        <article class="page-highlights__card">
+          <h3>Memória do evento</h3>
+          <p>Depois da corrida, este espaço também serve para centralizar fotos e registros da edição.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-timeline" aria-labelledby="corrida-timeline-title">
+      <div class="section-eyebrow">
+        <span class="eyebrow-line" aria-hidden="true"></span>
+        <span class="eyebrow-text">Jornada</span>
+        <span class="eyebrow-line" aria-hidden="true"></span>
+      </div>
+      <h2 id="corrida-timeline-title" class="section-title">Antes, durante e depois</h2>
+      <div class="page-timeline__grid">
+        <article class="page-timeline__item">
+          <span class="page-timeline__step">01</span>
+          <h3>Preparação</h3>
+          <p>Os participantes poderão acompanhar aqui percurso, horários e orientações logísticas antes do evento.</p>
+        </article>
+        <article class="page-timeline__item">
+          <span class="page-timeline__step">02</span>
+          <h3>Vivência coletiva</h3>
+          <p>No dia da programação, o encontro une prática esportiva, presença familiar e celebração institucional.</p>
+        </article>
+        <article class="page-timeline__item">
+          <span class="page-timeline__step">03</span>
+          <h3>Registro</h3>
+          <p>Após a corrida, a página permanece útil como arquivo visual e memória da edição dos 26 anos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-note" aria-labelledby="corrida-note-title">
+      <div class="page-note__box">
+        <h2 id="corrida-note-title">A corrida agora tem espaço próprio para evoluir</h2>
+        <p>O principal ganho desta página é estrutural: inscrição, percurso, cronograma e fotos futuras podem ser publicados aqui sem voltar a sobrecarregar a homepage.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo" aria-label="Rodapé institucional">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand__text">
+          <strong>Defensoria Pública</strong>
+          <span>do Estado de Roraima</span>
+        </div>
+      </div>
+      <div class="footer-divider" aria-hidden="true">
+        <img class="footer-divider__logo" src="../img/logotipo-defensoria-rr-rodape.png" alt="" />
+      </div>
+      <div class="footer-links">
+        <nav aria-label="Links do rodapé">
+          <h3 class="footer-nav-title">Navegação</h3>
+          <ul>
+            <li><a href="../index.html#programas">Programas comemorativos</a></li>
+            <li><a href="defensores.html">Defensores Públicos</a></li>
+            <li><a href="../index.html#missao">Nossa missão</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3 class="footer-nav-title">Contato</h3>
+          <address class="footer-address">
+            <p>Boa Vista, Roraima</p>
+            <p>Brasil</p>
+          </address>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-anniversary" aria-hidden="true">
+        <span class="footer-anni-num">26</span>
+        <span class="footer-anni-text">Anos</span>
+      </div>
+      <p class="footer-copy">&copy; 2026 Defensoria Pública de Roraima. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js" defer></script>
+</body>
+</html>

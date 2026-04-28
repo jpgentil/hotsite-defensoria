@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 
 const GSAP_MAX_RETRIES = 25;
 const GSAP_RETRY_DELAY_MS = 80;
@@ -131,6 +131,10 @@ document.addEventListener('DOMContentLoaded', () => {
   iniciarExperiencia();
 });
 
+function getAssetPrefix() {
+  return document.body?.dataset.assetPrefix || '';
+}
+
 /* ─── MENU HAMBÚRGUER ─── */
 function configurarMenuHamburguer() {
   const btn = document.querySelector('.hamburger-btn');
@@ -239,6 +243,7 @@ function gerarCards() {
   if (!grid) return;
 
   const fragment = document.createDocumentFragment();
+  const assetPrefix = getAssetPrefix();
 
   DEFENSORES_NOMES.forEach((def, idx) => {
     const grad = GRADIENTS[idx % GRADIENTS.length];
@@ -258,7 +263,7 @@ function gerarCards() {
         </div>
         <img
           class="defensor-card__img"
-          src="img/defensores/${foto}"
+          src="${assetPrefix}img/defensores/${foto}"
           alt=""
           loading="lazy"
           onerror="this.style.display='none'"
@@ -266,7 +271,7 @@ function gerarCards() {
         />
         <img
           class="defensor-card__gif"
-          src="img/defensores/Defensor-${numero}.gif"
+          src="${assetPrefix}img/defensores/Defensor-${numero}.gif"
           alt=""
           loading="lazy"
           onerror="this.style.display='none'"
@@ -293,12 +298,13 @@ function iniciarAnimacoes() {
 
   animarHero();
   animarProgramas();
+  animarInnerHero();
+  animarPageSections();
   animarDefensores();
   animarFrase();
   animarHeader();
   animarSectionTexto();
   animarSectionHistoria();
-  animarSectionSolidaria();
   animarDefensoresCTA();
 }
 
@@ -361,59 +367,77 @@ function animarSectionTexto() {
 }
 
 function animarProgramas() {
-  document.querySelectorAll('.program-section').forEach((section) => {
-    const body = section.querySelector('.program-section__body');
-    const visual = section.querySelector('.program-section__visual');
-    const deco = section.querySelector('.deco-roman');
-    const decoWrapper = section.querySelector('.program-section__deco');
+  const cards = document.querySelectorAll('.program-card');
+  if (!cards.length) return;
 
-    if (body) {
-      gsap.set(body, { opacity: 0, x: -30 });
-      body.setAttribute('data-gsap-hidden', 'true');
-    }
+  gsap.set(cards, { opacity: 0, y: 24 });
+  cards.forEach((card) => card.setAttribute('data-gsap-hidden', 'true'));
 
-    if (visual) {
-      gsap.set(visual, { opacity: 0, x: 30 });
-      visual.setAttribute('data-gsap-hidden', 'true');
-    }
-
-    if (deco) {
-      gsap.fromTo(deco, { x: 80, opacity: 0 }, {
-        x: 0, opacity: 1, duration: 1.4, ease: 'expo.out',
-        scrollTrigger: { trigger: section, start: 'top 80%', once: true }
+  ScrollTrigger.batch(cards, {
+    onEnter: (batch) => {
+      gsap.to(batch, {
+        opacity: 1,
+        y: 0,
+        duration: 0.75,
+        stagger: 0.12,
+        ease: 'power3.out',
+        onComplete: () => batch.forEach((card) => card.removeAttribute('data-gsap-hidden')),
       });
-    }
-
-    const tl = gsap.timeline({
-      scrollTrigger: { trigger: section, start: 'top 70%', once: true },
-      onComplete: () => {
-        body?.removeAttribute('data-gsap-hidden');
-        visual?.removeAttribute('data-gsap-hidden');
-      }
-    });
-
-    if (body) tl.to(body, { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out' });
-    if (visual) tl.to(visual, { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out' }, '-=0.5');
-
-    if (decoWrapper) {
-      gsap.to(decoWrapper, {
-        y: -60, ease: 'none',
-        scrollTrigger: { trigger: section, start: 'top bottom', end: 'bottom top', scrub: 1 }
-      });
-    }
+    },
+    start: 'top 85%',
+    once: true,
   });
 }
 
-function animarSectionSolidaria() {
-  const section = document.querySelector('.defensoria-solidaria-section');
-  if (!section) return;
+function animarInnerHero() {
+  const content = document.querySelector('.inner-hero__content');
+  const media = document.querySelector('.inner-hero__media');
 
-  gsap.from('.defensoria-solidaria__inner', {
-    opacity: 0,
-    y: 30,
-    duration: 0.9,
-    ease: 'power3.out',
-    scrollTrigger: { trigger: section, start: 'top 75%', once: true }
+  if (content) {
+    gsap.from(content, {
+      opacity: 0,
+      y: 34,
+      duration: 0.9,
+      ease: 'power3.out',
+      delay: 0.15,
+    });
+  }
+
+  if (media) {
+    gsap.from(media, {
+      opacity: 0,
+      x: 36,
+      duration: 1,
+      ease: 'expo.out',
+      delay: 0.25,
+    });
+  }
+}
+
+function animarPageSections() {
+  const selectors = [
+    '.page-story__content',
+    '.page-panel',
+    '.page-highlights__card',
+    '.page-timeline__item',
+    '.page-note',
+  ];
+
+  selectors.forEach((selector) => {
+    document.querySelectorAll(selector).forEach((element, index) => {
+      gsap.from(element, {
+        opacity: 0,
+        y: 24,
+        duration: 0.7,
+        ease: 'power3.out',
+        delay: index * 0.04,
+        scrollTrigger: {
+          trigger: element,
+          start: 'top 82%',
+          once: true,
+        }
+      });
+    });
   });
 }
 
@@ -556,7 +580,7 @@ document.addEventListener('click', (e) => {
 
 /* ─── BOTÕES CTA ─── */
 function configurarBotoesCTA() {
-  const ctaButtons = document.querySelectorAll('.hero__cta, .program-cta, .defensores-cta__btn');
+  const ctaButtons = document.querySelectorAll('.hero__cta, .program-cta, .defensores-cta__btn, .page-cta');
 
   ctaButtons.forEach((btn) => {
     btn.addEventListener('mouseenter', () => {

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Carreta dos Direitos — programa itinerante da Defensoria Pública de Roraima." />
+  <title>Carreta dos Direitos — Defensoria Pública do Estado de Roraima</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Nunito+Sans:wght@300;400;600;700&family=Blinker:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body id="top" class="inner-page" data-asset-prefix="../">
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <button class="hamburger-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-overlay">
+    <span class="hamburger-btn__line"></span>
+    <span class="hamburger-btn__line"></span>
+    <span class="hamburger-btn__line"></span>
+  </button>
+
+  <nav id="nav-overlay" class="nav-overlay" aria-label="Menu principal" aria-hidden="true">
+    <div class="nav-overlay__backdrop"></div>
+    <div class="nav-overlay__panel">
+      <div class="nav-overlay__header">
+        <span class="nav-overlay__eyebrow">Defensoria Pública · 26 Anos</span>
+        <button class="nav-overlay__close" aria-label="Fechar menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M3 3l14 14M17 3L3 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+      <ul class="nav-overlay__list" role="list">
+        <li><a href="../index.html#texto-abertura" class="nav-overlay__link"><span class="nav-overlay__num">01</span><span class="nav-overlay__label">Início</span></a></li>
+        <li><a href="carretadireitos.html" class="nav-overlay__link"><span class="nav-overlay__num">02</span><span class="nav-overlay__label">Carreta dos Direitos</span></a></li>
+        <li><a href="enfimcasados.html" class="nav-overlay__link"><span class="nav-overlay__num">03</span><span class="nav-overlay__label">Enfim Casados</span></a></li>
+        <li><a href="corrida26.html" class="nav-overlay__link"><span class="nav-overlay__num">04</span><span class="nav-overlay__label">Corrida dos 26 Anos</span></a></li>
+        <li><a href="defsolidaria.html" class="nav-overlay__link"><span class="nav-overlay__num">05</span><span class="nav-overlay__label">Defensoria Solidária</span></a></li>
+        <li><a href="../index.html#historia" class="nav-overlay__link"><span class="nav-overlay__num">06</span><span class="nav-overlay__label">A História da Defensoria</span></a></li>
+        <li><a href="defensores.html" class="nav-overlay__link"><span class="nav-overlay__num">07</span><span class="nav-overlay__label">Defensores</span></a></li>
+        <li><a href="../index.html#missao" class="nav-overlay__link"><span class="nav-overlay__num">08</span><span class="nav-overlay__label">Missão</span></a></li>
+      </ul>
+      <div class="nav-overlay__footer">
+        <span>Boa Vista · Roraima · Brasil</span>
+      </div>
+    </div>
+  </nav>
+
+  <header class="site-header" role="banner" aria-label="Cabeçalho institucional">
+    <div class="header-inner">
+      <a class="header-logo" href="../index.html#top" aria-label="Voltar ao início do site">
+        <img class="header-logo__brasao" src="../img/brasao_dpe.png" alt="" aria-hidden="true" />
+        <span class="header-logo__text">Defensoria Pública<br /><strong>de Roraima</strong></span>
+      </a>
+      <nav class="header-nav" aria-label="Navegação principal">
+        <a href="../index.html#programas">Programas</a>
+        <a href="defensores.html">Defensores</a>
+        <a href="../index.html#missao">Missão</a>
+      </nav>
+      <div class="header-badge" aria-label="26 anos">
+        <span class="badge-number">26</span>
+        <span class="badge-label">anos</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="inner-page__main">
+    <section class="inner-hero" aria-labelledby="carreta-title">
+      <div class="inner-hero__layout">
+        <div class="inner-hero__content">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line" aria-hidden="true"></span>
+            <span class="eyebrow-text">Programa 01 · Justiça Itinerante</span>
+          </div>
+          <h1 id="carreta-title" class="inner-hero__title"><em>Carreta</em><br />dos Direitos</h1>
+          <p class="inner-hero__lead">Desde 2024, a Carreta dos Direitos percorre Roraima levando a Defensoria para perto de quem mais precisa, transformando deslocamento em acesso real à justiça.</p>
+          <div class="inner-hero__actions">
+            <a href="#conteudo" class="page-cta">
+              <span>Ler conteúdo</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="../index.html#programas" class="page-cta">
+              <span>Voltar à home</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="inner-hero__media" aria-hidden="true">
+          <img src="../img/carretadireitos.png" alt="" />
+          <div class="inner-hero__media-inner">
+            <span class="inner-hero__kicker">Acesso onde ele falta</span>
+            <p class="inner-hero__caption">A Carreta aproxima orientação jurídica, documentação e encaminhamento de quem nem sempre consegue chegar a uma unidade fixa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="conteudo" class="page-story" aria-labelledby="carreta-story-title">
+      <div class="page-story__layout">
+        <div class="page-story__content">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line" aria-hidden="true"></span>
+            <span class="eyebrow-text">O Programa</span>
+          </div>
+          <h2 id="carreta-story-title" class="section-title">Uma estrutura móvel para levar direitos <em>até quem precisa  </em></h2>
+          <p>Desde 2024, a Carreta dos Direitos percorre Roraima levando a Defensoria para perto de quem mais precisa. Já passou por cidades, bairros e comunidades onde o atendimento jurídico raramente faz parte da rotina.</p>
+          <p>Todo mês, ela para em uma nova localidade e vira referência para quem tem situações represadas por falta de acesso ou informação. A lógica é simples: se a barreira está na distância, a instituição se movimenta.</p>
+          <p>Só em 2025, foram mais de 231 mil atendimentos em todo o estado. Dentro da carreta, pessoas conseguem tirar documentos, buscar orientação e dar andamento em questões que pareciam sem saída.</p>
+          <p class="texto-abertura__destaque">Quando a Carreta chega, ela muda o dia de quem estava esperando uma solução.</p>
+        </div>
+        <aside class="page-panel" aria-labelledby="carreta-panel-title">
+          <h2 id="carreta-panel-title" class="page-panel__title">Pontos-chave</h2>
+          <ul class="page-panel__list">
+            <li><span class="page-panel__eyebrow">Início</span><span class="page-panel__text">Programa em circulação desde 2024.</span></li>
+            <li><span class="page-panel__eyebrow">Alcance</span><span class="page-panel__text">Passagem por cidades, bairros e comunidades do estado.</span></li>
+            <li><span class="page-panel__eyebrow">Impacto</span><span class="page-panel__text">Mais de 231 mil atendimentos registrados em 2025.</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page-highlights" aria-labelledby="carreta-highlights-title">
+      <div class="section-eyebrow">
+        <span class="eyebrow-line" aria-hidden="true"></span>
+        <span class="eyebrow-text">Como Funciona</span>
+        <span class="eyebrow-line" aria-hidden="true"></span>
+      </div>
+      <h2 id="carreta-highlights-title" class="section-title">O que a Carreta entrega em cada parada</h2>
+      <div class="page-highlights__grid">
+        <article class="page-highlights__card">
+          <h3><em>Presença no território</em></h3>
+          <p>O atendimento chega a locais onde a rotina institucional ainda não está presente de forma contínua.</p>
+        </article>
+        <article class="page-highlights__card">
+          <h3><em>Resolução prática</em></h3>
+          <p>A população consegue reunir documentos, pedir orientação e destravar questões jurídicas diretamente no local.</p>
+        </article>
+        <article class="page-highlights__card">
+          <h3><em>Referência imediata</em></h3>
+          <p>Quando estaciona, a Carreta se torna ponto de apoio para demandas que ficaram aguardando oportunidade de atendimento.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-timeline" aria-labelledby="carreta-timeline-title">
+      <div class="section-eyebrow">
+        <span class="eyebrow-line" aria-hidden="true"></span>
+        <span class="eyebrow-text">Fluxo da Ação</span>
+        <span class="eyebrow-line" aria-hidden="true"></span>
+      </div>
+      <h2 id="carreta-timeline-title" class="section-title">Da chegada ao encaminhamento</h2>
+      <div class="page-timeline__grid">
+        <article class="page-timeline__item">
+          <span class="page-timeline__step">01</span>
+          <h3>Chegada</h3>
+          <p>A estrutura é posicionada em uma localidade estratégica para ampliar o acesso naquele território.</p>
+        </article>
+        <article class="page-timeline__item">
+          <span class="page-timeline__step">02</span>
+          <h3>Atendimento</h3>
+          <p>Documentação, escuta inicial, orientação e encaminhamento passam a acontecer ali mesmo, de forma concentrada.</p>
+        </article>
+        <article class="page-timeline__item">
+          <span class="page-timeline__step">03</span>
+          <h3>Desdobramento</h3>
+          <p>Cada atendimento abre caminho para continuidade do caso e reduz o peso de demandas antes paradas pela distância.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-note" aria-labelledby="carreta-note-title">
+      <div class="page-note__box">
+        <h2 id="carreta-note-title">A presença física continua sendo decisiva</h2>
+        <p>Nesta página, a Carreta deixa de ser apenas um destaque da home e passa a ter espaço próprio para consolidar contexto, memória institucional e futuras atualizações do programa.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo" aria-label="Rodapé institucional">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand__text">
+          <strong>Defensoria Pública</strong>
+          <span>do Estado de Roraima</span>
+        </div>
+      </div>
+      <div class="footer-divider" aria-hidden="true">
+        <img class="footer-divider__logo" src="../img/logotipo-defensoria-rr-rodape.png" alt="" />
+      </div>
+      <div class="footer-links">
+        <nav aria-label="Links do rodapé">
+          <h3 class="footer-nav-title">Navegação</h3>
+          <ul>
+            <li><a href="../index.html#programas">Programas comemorativos</a></li>
+            <li><a href="defensores.html">Defensores Públicos</a></li>
+            <li><a href="../index.html#missao">Nossa missão</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3 class="footer-nav-title">Contato</h3>
+          <address class="footer-address">
+            <p>Boa Vista, Roraima</p>
+            <p>Brasil</p>
+          </address>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-anniversary" aria-hidden="true">
+        <span class="footer-anni-num">26</span>
+        <span class="footer-anni-text">Anos</span>
+      </div>
+      <p class="footer-copy">&copy; 2026 Defensoria Pública de Roraima. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js" defer></script>
+</body>
+</html>

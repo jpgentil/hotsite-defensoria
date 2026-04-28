@@ -1,4 +1,4 @@
-Você precisará transformar as seções  carreta dos direitos, enfim casados, corrida dos 26 anos, e defensoria solidária (essas seções agora devem ficar uma ao lado da outra) em CTAs que conterão um botão para as respectivas páginas: carretadireitos.html, enfimcasados.html, corrida26.html, defsolidaria.html. Crie uma pasta chamada pages para colocar todas as páginas html e altere as referências para que não aconteça nenhum link quebrado. Além disso, a seção história da defensoria deve ficar abaixo da seção texto de abertura.
+Você precisará transformar as seções carreta dos direitos, enfim casados, corrida dos 26 anos, e defensoria solidária (essas seções agora devem ficar uma ao lado da outra) em CTAs que conterão um botão para as respectivas páginas: carretadireitos.html, enfimcasados.html, corrida26.html, defsolidaria.html. Crie uma pasta chamada pages para colocar todas as páginas html e altere as referências para que não aconteça nenhum link quebrado. Além disso, a seção história da defensoria deve ficar abaixo da seção texto de abertura.
 
 As seções só não deverão ficar uma ao lado da outra em dispositivos mobile. 
 

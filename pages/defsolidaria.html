@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Defensoria Solidária — página institucional em preparação para as ações solidárias dos 26 anos." />
+  <title>Defensoria Solidária — Defensoria Pública do Estado de Roraima</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Nunito+Sans:wght@300;400;600;700&family=Blinker:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body id="top" class="inner-page" data-asset-prefix="../">
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <button class="hamburger-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-overlay">
+    <span class="hamburger-btn__line"></span>
+    <span class="hamburger-btn__line"></span>
+    <span class="hamburger-btn__line"></span>
+  </button>
+
+  <nav id="nav-overlay" class="nav-overlay" aria-label="Menu principal" aria-hidden="true">
+    <div class="nav-overlay__backdrop"></div>
+    <div class="nav-overlay__panel">
+      <div class="nav-overlay__header">
+        <span class="nav-overlay__eyebrow">Defensoria Pública · 26 Anos</span>
+        <button class="nav-overlay__close" aria-label="Fechar menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M3 3l14 14M17 3L3 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+      <ul class="nav-overlay__list" role="list">
+        <li><a href="../index.html#texto-abertura" class="nav-overlay__link"><span class="nav-overlay__num">01</span><span class="nav-overlay__label">Início</span></a></li>
+        <li><a href="carretadireitos.html" class="nav-overlay__link"><span class="nav-overlay__num">02</span><span class="nav-overlay__label">Carreta dos Direitos</span></a></li>
+        <li><a href="enfimcasados.html" class="nav-overlay__link"><span class="nav-overlay__num">03</span><span class="nav-overlay__label">Enfim Casados</span></a></li>
+        <li><a href="corrida26.html" class="nav-overlay__link"><span class="nav-overlay__num">04</span><span class="nav-overlay__label">Corrida dos 26 Anos</span></a></li>
+        <li><a href="defsolidaria.html" class="nav-overlay__link"><span class="nav-overlay__num">05</span><span class="nav-overlay__label">Defensoria Solidária</span></a></li>
+        <li><a href="../index.html#historia" class="nav-overlay__link"><span class="nav-overlay__num">06</span><span class="nav-overlay__label">A História da Defensoria</span></a></li>
+        <li><a href="defensores.html" class="nav-overlay__link"><span class="nav-overlay__num">07</span><span class="nav-overlay__label">Defensores</span></a></li>
+        <li><a href="../index.html#missao" class="nav-overlay__link"><span class="nav-overlay__num">08</span><span class="nav-overlay__label">Missão</span></a></li>
+      </ul>
+      <div class="nav-overlay__footer">
+        <span>Boa Vista · Roraima · Brasil</span>
+      </div>
+    </div>
+  </nav>
+
+  <header class="site-header" role="banner" aria-label="Cabeçalho institucional">
+    <div class="header-inner">
+      <a class="header-logo" href="../index.html#top" aria-label="Voltar ao início do site">
+        <img class="header-logo__brasao" src="../img/brasao_dpe.png" alt="" aria-hidden="true" />
+        <span class="header-logo__text">Defensoria Pública<br /><strong>de Roraima</strong></span>
+      </a>
+      <nav class="header-nav" aria-label="Navegação principal">
+        <a href="../index.html#programas">Programas</a>
+        <a href="defensores.html">Defensores</a>
+        <a href="../index.html#missao">Missão</a>
+      </nav>
+      <div class="header-badge" aria-label="26 anos">
+        <span class="badge-number">26</span>
+        <span class="badge-label">anos</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="inner-page__main">
+    <section class="inner-hero" aria-labelledby="solidaria-title">
+      <div class="inner-hero__layout">
+        <div class="inner-hero__content">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line" aria-hidden="true"></span>
+            <span class="eyebrow-text">Programa 04 · Em preparação</span>
+          </div>
+          <h1 id="solidaria-title" class="inner-hero__title">Defensoria<br /><em>Solidária</em></h1>
+          <p class="inner-hero__lead">Esta frente ganha página própria para concentrar a construção da proposta, as futuras atualizações e a comunicação das ações solidárias ligadas aos 26 anos da instituição.</p>
+          <div class="inner-hero__actions">
+            <a href="#conteudo" class="page-cta">
+              <span>Ver status</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="../index.html#programas" class="page-cta">
+              <span>Voltar à home</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="inner-hero__media" aria-hidden="true">
+          <div class="inner-hero__visual">
+            <svg viewBox="0 0 90 90" fill="none">
+              <path d="M45 72s-21-13.5-21-31.5c0-9.4 6.7-16.5 15.2-16.5 5.2 0 9.2 2.4 11.8 6.4 2.6-4 6.6-6.4 11.8-6.4 8.5 0 15.2 7.1 15.2 16.5C66 58.5 45 72 45 72Z" stroke="currentColor" stroke-width="4" />
+            </svg>
+          </div>
+          <div class="inner-hero__media-inner">
+            <span class="inner-hero__kicker">Página em construção</span>
+            <p class="inner-hero__caption">O objetivo aqui é abrir espaço para uma comunicação clara da ação antes mesmo da divulgação final dos detalhes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="conteudo" class="page-story" aria-labelledby="solidaria-story-title">
+      <div class="page-story__layout">
+        <div class="page-story__content">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line" aria-hidden="true"></span>
+            <span class="eyebrow-text">Status atual</span>
+          </div>
+          <h2 id="solidaria-story-title" class="section-title">Uma frente solidária com estrutura pronta para <em>receber atualizações</em></h2>
+          <p>A Defensoria Solidária agora possui um endereço próprio dentro do hotsite. Isso resolve uma limitação prática da home: futuras informações da ação não precisam mais ficar comprimidas em um bloco genérico.</p>
+          <p>Enquanto os detalhes finais são preparados, a página já cumpre um papel importante: sinaliza a existência do programa, preserva a identidade visual do projeto e abre caminho para publicações consistentes quando a agenda estiver definida.</p>
+          <p>Na próxima etapa, este espaço pode receber objetivos da ação, cronograma, parceiros envolvidos e orientações de participação, sem exigir novo refactor estrutural no site.</p>
+          <p class="texto-abertura__destaque">Hoje o status é “em breve”, mas a base técnica e visual da página já está pronta para evoluir.</p>
+        </div>
+        <aside class="page-panel" aria-labelledby="solidaria-panel-title">
+          <h2 id="solidaria-panel-title" class="page-panel__title">Pontos-chave</h2>
+          <ul class="page-panel__list">
+            <li><span class="page-panel__eyebrow">Situação</span><span class="page-panel__text">Página publicada com identidade visual completa.</span></li>
+            <li><span class="page-panel__eyebrow">Objetivo</span><span class="page-panel__text">Centralizar atualizações futuras do programa solidário.</span></li>
+            <li><span class="page-panel__eyebrow">Próximo passo</span><span class="page-panel__text">Inserir conteúdo definitivo quando a ação for fechada.</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page-highlights" aria-labelledby="solidaria-highlights-title">
+      <div class="section-eyebrow">
+        <span class="eyebrow-line" aria-hidden="true"></span>
+        <span class="eyebrow-text">Direção da página</span>
+        <span class="eyebrow-line" aria-hidden="true"></span>
+      </div>
+      <h2 id="solidaria-highlights-title" class="section-title">O que este espaço pode concentrar</h2>
+      <div class="page-highlights__grid">
+        <article class="page-highlights__card">
+          <h3>Rede de apoio</h3>
+          <p>Informações sobre parceiros institucionais e comunitários envolvidos na ação.</p>
+        </article>
+        <article class="page-highlights__card">
+          <h3>Mobilização</h3>
+          <p>Chamadas públicas, orientações e formas de participação quando a agenda for divulgada.</p>
+        </article>
+        <article class="page-highlights__card">
+          <h3>Memória solidária</h3>
+          <p>Depois da execução, a página também pode servir como registro das entregas e do alcance social.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-timeline" aria-labelledby="solidaria-timeline-title">
+      <div class="section-eyebrow">
+        <span class="eyebrow-line" aria-hidden="true"></span>
+        <span class="eyebrow-text">Etapa atual</span>
+        <span class="eyebrow-line" aria-hidden="true"></span>
+      </div>
+      <h2 id="solidaria-timeline-title" class="section-title">Evolução prevista</h2>
+      <div class="page-timeline__grid">
+        <article class="page-timeline__item">
+          <span class="page-timeline__step">01</span>
+          <h3>Estrutura pronta</h3>
+          <p>A página já foi criada e alinhada ao padrão visual do restante do hotsite.</p>
+        </article>
+        <article class="page-timeline__item">
+          <span class="page-timeline__step">02</span>
+          <h3>Conteúdo definitivo</h3>
+          <p>Os detalhes da ação podem ser inseridos aqui assim que forem validados institucionalmente.</p>
+        </article>
+        <article class="page-timeline__item">
+          <span class="page-timeline__step">03</span>
+          <h3>Atualização contínua</h3>
+          <p>Depois do lançamento, a página pode concentrar agenda, resultados e documentação da iniciativa.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-note" aria-labelledby="solidaria-note-title">
+      <div class="page-note__box">
+        <h2 id="solidaria-note-title">“Em breve” agora sem vazio estrutural</h2>
+        <p>Antes havia apenas um bloco isolado na home. Agora existe uma página pronta para crescer sem quebrar navegação, identidade visual ou consistência de conteúdo.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo" aria-label="Rodapé institucional">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand__text">
+          <strong>Defensoria Pública</strong>
+          <span>do Estado de Roraima</span>
+        </div>
+      </div>
+      <div class="footer-divider" aria-hidden="true">
+        <img class="footer-divider__logo" src="../img/logotipo-defensoria-rr-rodape.png" alt="" />
+      </div>
+      <div class="footer-links">
+        <nav aria-label="Links do rodapé">
+          <h3 class="footer-nav-title">Navegação</h3>
+          <ul>
+            <li><a href="../index.html#programas">Programas comemorativos</a></li>
+            <li><a href="defensores.html">Defensores Públicos</a></li>
+            <li><a href="../index.html#missao">Nossa missão</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3 class="footer-nav-title">Contato</h3>
+          <address class="footer-address">
+            <p>Boa Vista, Roraima</p>
+            <p>Brasil</p>
+          </address>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-anniversary" aria-hidden="true">
+        <span class="footer-anni-num">26</span>
+        <span class="footer-anni-text">Anos</span>
+      </div>
+      <p class="footer-copy">&copy; 2026 Defensoria Pública de Roraima. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js" defer></script>
+</body>
+</html>

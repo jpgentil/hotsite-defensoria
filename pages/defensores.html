@@ -13,21 +13,54 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="../styles.css" />
 </head>
-<body class="defensores-page">
+<body id="top" class="defensores-page inner-page" data-asset-prefix="../">
   <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <button class="hamburger-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-overlay">
+    <span class="hamburger-btn__line"></span>
+    <span class="hamburger-btn__line"></span>
+    <span class="hamburger-btn__line"></span>
+  </button>
+
+  <nav id="nav-overlay" class="nav-overlay" aria-label="Menu principal" aria-hidden="true">
+    <div class="nav-overlay__backdrop"></div>
+    <div class="nav-overlay__panel">
+      <div class="nav-overlay__header">
+        <span class="nav-overlay__eyebrow">Defensoria Pública · 26 Anos</span>
+        <button class="nav-overlay__close" aria-label="Fechar menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M3 3l14 14M17 3L3 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+      <ul class="nav-overlay__list" role="list">
+        <li><a href="../index.html#texto-abertura" class="nav-overlay__link"><span class="nav-overlay__num">01</span><span class="nav-overlay__label">Início</span></a></li>
+        <li><a href="carretadireitos.html" class="nav-overlay__link"><span class="nav-overlay__num">02</span><span class="nav-overlay__label">Carreta dos Direitos</span></a></li>
+        <li><a href="enfimcasados.html" class="nav-overlay__link"><span class="nav-overlay__num">03</span><span class="nav-overlay__label">Enfim Casados</span></a></li>
+        <li><a href="corrida26.html" class="nav-overlay__link"><span class="nav-overlay__num">04</span><span class="nav-overlay__label">Corrida dos 26 Anos</span></a></li>
+        <li><a href="defsolidaria.html" class="nav-overlay__link"><span class="nav-overlay__num">05</span><span class="nav-overlay__label">Defensoria Solidária</span></a></li>
+        <li><a href="../index.html#historia" class="nav-overlay__link"><span class="nav-overlay__num">06</span><span class="nav-overlay__label">A História da Defensoria</span></a></li>
+        <li><a href="defensores.html" class="nav-overlay__link"><span class="nav-overlay__num">07</span><span class="nav-overlay__label">Defensores</span></a></li>
+        <li><a href="../index.html#missao" class="nav-overlay__link"><span class="nav-overlay__num">08</span><span class="nav-overlay__label">Missão</span></a></li>
+      </ul>
+      <div class="nav-overlay__footer">
+        <span>Boa Vista · Roraima · Brasil</span>
+      </div>
+    </div>
+  </nav>
 
   <header class="site-header" role="banner" aria-label="Cabeçalho institucional">
     <div class="header-inner">
-      <div class="header-logo">
-        <img class="header-logo__brasao" src="img/brasao_dpe.png" alt="" width="572" height="570" aria-hidden="true" />
-        <span class="header-logo__text">Defensoria Pública<br><strong>de Roraima</strong></span>
-      </div>
+      <a class="header-logo" href="../index.html#top" aria-label="Voltar ao início do site">
+        <img class="header-logo__brasao" src="../img/brasao_dpe.png" alt="" width="572" height="570" aria-hidden="true" />
+        <span class="header-logo__text">Defensoria Pública<br /><strong>de Roraima</strong></span>
+      </a>
       <nav class="header-nav" aria-label="Navegação principal">
-        <a href="index.html#programas">Programas</a>
+        <a href="../index.html#programas">Programas</a>
         <a href="defensores.html">Defensores</a>
-        <a href="index.html#missao">Missão</a>
+        <a href="../index.html#missao">Missão</a>
       </nav>
       <div class="header-badge" aria-label="26 anos">
         <span class="badge-number">26</span>
@@ -44,7 +77,7 @@
           <span class="eyebrow-text">Nossos Agentes</span>
           <span class="eyebrow-line" aria-hidden="true"></span>
         </div>
-        <h1 id="defensores-title" class="section-title">Os <em>Defensores</em><br>de Roraima</h1>
+        <h1 id="defensores-title" class="section-title">Os <em>Defensores</em><br />de Roraima</h1>
         <p class="section-subtitle">52 profissionais comprometidos com a justiça e a cidadania em todo o estado</p>
       </div>
 
@@ -61,15 +94,15 @@
         </div>
       </div>
       <div class="footer-divider" aria-hidden="true">
-        <img class="footer-divider__logo" src="img/logotipo-defensoria-rr-rodape.png" alt="" width="358" height="133" loading="lazy" />
+        <img class="footer-divider__logo" src="../img/logotipo-defensoria-rr-rodape.png" alt="" width="358" height="133" loading="lazy" />
       </div>
       <div class="footer-links">
         <nav aria-label="Links do rodapé">
           <h2 class="footer-nav-title">Navegação</h2>
           <ul>
-            <li><a href="index.html#programas">Programas comemorativos</a></li>
+            <li><a href="../index.html#programas">Programas comemorativos</a></li>
             <li><a href="defensores.html">Defensores Públicos</a></li>
-            <li><a href="index.html#missao">Nossa missão</a></li>
+            <li><a href="../index.html#missao">Nossa missão</a></li>
           </ul>
         </nav>
         <div>
@@ -92,6 +125,6 @@
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="../script.js" defer></script>
 </body>
 </html>
