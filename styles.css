@@ -1468,6 +1468,10 @@ a { text-decoration: none; color: inherit; }
   flex-wrap: wrap;
 }
 
+.footer-links > * {
+  min-width: 180px;
+}
+
 .footer-nav-title {
   font-family: var(--font-ui);
   font-size: 0.65rem;
@@ -1498,6 +1502,15 @@ a { text-decoration: none; color: inherit; }
 
 .footer-links nav ul a:hover { opacity: 1; }
 
+.footer-address a {
+  color: inherit;
+  opacity: 0.9;
+}
+
+.footer-address a:hover {
+  opacity: 1;
+}
+
 .footer-address {
   font-style: normal;
   font-family: var(--font-body);
@@ -1517,6 +1530,23 @@ a { text-decoration: none; color: inherit; }
   border-top: 1px solid rgba(26, 51, 38, 0.15);
   margin-top: 1.5rem;
   gap: 2rem;
+}
+
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+  max-width: 560px;
+}
+
+.footer-privacy-note {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: rgba(26, 51, 38, 0.7);
+  text-align: right;
+  margin: 0;
 }
 
 .footer-anniversary {
@@ -1554,6 +1584,8 @@ a { text-decoration: none; color: inherit; }
 
 @media (max-width: 512px) {
   .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .footer-meta { align-items: flex-start; max-width: none; }
+  .footer-privacy-note { text-align: left; }
   .footer-copy { text-align: left; }
   .site-footer { padding: 2.25rem 1rem 1.5rem; }
 }
