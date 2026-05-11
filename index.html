@@ -283,34 +283,37 @@
       </div>
     </section>
 
-      <!-- ── Seção: Vozes dos Assistidos ── -->
-      <div class="assistidos-section">
+      <!-- ── Seção: Histórias e Vídeos ── -->
+      <section class="assistidos-section" aria-labelledby="historias-title">
         <div class="assistidos__header">
           <div class="section-eyebrow">
             <span class="eyebrow-line" aria-hidden="true"></span>
-            <span class="eyebrow-text">Vozes da Comunidade</span>
+            <span class="eyebrow-text">Histórias e Releases</span>
             <span class="eyebrow-line" aria-hidden="true"></span>
           </div>
-          <h2 class="section-title">Quem fala é quem <em>viveu</em></h2>
-          <p class="section-subtitle">Relatos de pessoas que encontraram na Defensoria um caminho, uma voz e um recomeço.</p>
+          <h2 id="historias-title" class="section-title">Histórias que mostram a <em>Defensoria em ação</em></h2>
+          <p class="section-subtitle">Uma seleção de releases institucionais que registram atendimentos, conquistas de direitos e histórias reais acompanhadas pela DPE-RR.</p>
         </div>
 
         <div class="assistidos-cards-grid">
 
-          <!-- Card 1 -->
+          <!-- Release Card 1 -->
           <article class="assistido-card">
             <div class="assistido-card__img-wrap">
-              <img src="img/assistido_01.jpeg" alt="Foto de assistido" class="assistido-card__img" loading="lazy" />
+              <!-- TODO: replace with photo to be provided by communications team -->
+              <img src="" alt="Imagem da matéria sobre atendimento da Carreta dos Direitos em Alto Alegre" class="assistido-card__img assistido-card__img--pending" loading="lazy" />
               <div class="assistido-card__img-overlay" aria-hidden="true"></div>
             </div>
-            <blockquote class="assistido-card__quote">
-              <p>Ótimo. Não é bom não, é ótimo, excelente. Não tenho o que reclamar. Cheguei e fomos os primeiros a serem atendidos. Em todas as áreas que passamos, fomos bem atendidos</p>
-              <footer class="assistido-card__author">
-                <span class="assistido-card__name">Luiz Carlos Souza de Oliveira</span>
-                <span class="assistido-card__context">Carreta dos Direitos - DPE-RR</span>
+            <div class="assistido-card__quote assistido-card__quote--release">
+              <p class="assistido-card__kicker">Release 01</p>
+              <h3 class="assistido-card__release-title">DIREITO À SAÚDE: Defensoria garante remédio de alto custo para adolescente com leucemia em RR</h3>
+              <p class="assistido-card__release-desc">Após falha no sistema impedir o acesso ao tratamento, a DPE-RR atuou judicialmente para garantir o medicamento indispensável à continuidade do cuidado de uma adolescente em tratamento contra leucemia.</p>
+              <footer class="assistido-card__author assistido-card__author--release">
+                <span class="assistido-card__name">Notícia institucional</span>
+                <span class="assistido-card__context">Publicado em 06 de maio de 2026</span>
               </footer>
-            </blockquote>
-            <a href="https://defensoria.rr.def.br/comunicacao/noticias/166/" target="_blank" class="assistido-card__link" aria-label="Ler mais sobre a história de Luiz Carlos Souza de Oliveira">
+            </div>
+            <a href="https://defensoria.rr.def.br/comunicacao/noticias/179/" target="_blank" rel="noopener noreferrer" class="assistido-card__link" aria-label="Ler release sobre garantia de medicamento de alto custo">
               <span>Ler mais</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -318,20 +321,22 @@
             </a>
           </article>
 
-          <!-- Card 2 -->
+          <!-- Release Card 2 -->
           <article class="assistido-card">
-            <div class="assistido-card__img-wrap">
-              <img src="img/assistido_02.jpeg" alt="Foto de assistido" class="assistido-card__img" loading="lazy" />
+            <div class="assistido-card__img-wrap assistido-card__img-wrap--neutral">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%23204931'/%3E%3Cstop offset='100%25' stop-color='%233a8057'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ccircle cx='640' cy='120' r='120' fill='%235ec465' opacity='0.18'/%3E%3Ccircle cx='180' cy='480' r='160' fill='%23f7f3eb' opacity='0.08'/%3E%3Cpath d='M120 390h560' stroke='%23c9a84c' stroke-width='2' stroke-opacity='0.45'/%3E%3Cpath d='M120 445h430' stroke='%23c9a84c' stroke-width='2' stroke-opacity='0.25'/%3E%3Ctext x='120' y='220' fill='%23f7f3eb' font-family='Blinker, Arial, sans-serif' font-size='40' font-weight='700'%3ENot%C3%ADcia DPE-RR%3C/text%3E%3Ctext x='120' y='280' fill='%23f7f3eb' fill-opacity='0.8' font-family='Blinker, Arial, sans-serif' font-size='22'%3EHist%C3%B3rias que garantem direitos%3C/text%3E%3C/svg%3E" alt="Imagem ilustrativa da notícia sobre a Carreta dos Direitos" class="assistido-card__img" loading="lazy" />
               <div class="assistido-card__img-overlay" aria-hidden="true"></div>
             </div>
-            <blockquote class="assistido-card__quote">
-              <p>Foi tão simples e rápido que eu nem acreditei, aproveitei também para fazer a inclusão no documento dos meus três filhos</p>
-              <footer class="assistido-card__author">
-                <span class="assistido-card__name">Sara Vitória dos Santos Pereira</span>
-                <span class="assistido-card__context">Macuxi da Comunidade Garagem</span>
+            <div class="assistido-card__quote assistido-card__quote--release">
+              <p class="assistido-card__kicker">Release 02</p>
+              <h3 class="assistido-card__release-title">CIDADANIA E ACESSO A DIREITOS: Família consegue documentos e atendimento para filhos na Carreta dos Direitos em Alto Alegre</h3>
+              <p class="assistido-card__release-desc">No primeiro dia da ação em Alto Alegre, uma família resolveu demandas de documentação e atendimento para os filhos, reforçando o impacto direto da Carreta dos Direitos na garantia de cidadania.</p>
+              <footer class="assistido-card__author assistido-card__author--release">
+                <span class="assistido-card__name">Notícia institucional</span>
+                <span class="assistido-card__context">Publicado em 08 de abril de 2026</span>
               </footer>
-            </blockquote>
-            <a href="https://defensoria.rr.def.br/comunicacao/noticias/172/" target="_blank" class="assistido-card__link" aria-label="Ler mais sobre a história de Luiz Carlos Souza de Oliveira">
+            </div>
+            <a href="https://defensoria.rr.def.br/comunicacao/noticias/166/" target="_blank" rel="noopener noreferrer" class="assistido-card__link" aria-label="Ler release sobre documentos e atendimento familiar na Carreta dos Direitos">
               <span>Ler mais</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -339,23 +344,22 @@
             </a>
           </article>
 
-          <!-- Card 3 -->
+          <!-- Release Card 3 -->
           <article class="assistido-card">
-            <div class="assistido-card__img-wrap assistido-card__img-wrap--empty" aria-hidden="true">
-              <svg class="assistido-card__placeholder-icon" width="52" height="52" viewBox="0 0 52 52" fill="none">
-                <rect x="7" y="9" width="38" height="34" rx="3" stroke="currentColor" stroke-width="1.6"/>
-                <path d="M13 35l10-11 8 8 8-10 6 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="19" cy="19" r="3.5" stroke="currentColor" stroke-width="1.6"/>
-              </svg>
+            <div class="assistido-card__img-wrap assistido-card__img-wrap--neutral">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g2' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%231a3326'/%3E%3Cstop offset='100%25' stop-color='%23204931'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g2)'/%3E%3Crect x='92' y='96' width='616' height='408' rx='24' fill='none' stroke='%23c9a84c' stroke-opacity='0.4' stroke-width='2'/%3E%3Cpath d='M128 390h544' stroke='%235ec465' stroke-width='2' stroke-opacity='0.35'/%3E%3Ctext x='128' y='220' fill='%23f7f3eb' font-family='Blinker, Arial, sans-serif' font-size='38' font-weight='700'%3EDireito de Existir%3C/text%3E%3Ctext x='128' y='276' fill='%23f7f3eb' fill-opacity='0.76' font-family='Blinker, Arial, sans-serif' font-size='22'%3EMutir%C3%A3o de documenta%C3%A7%C3%A3o e cidadania%3C/text%3E%3C/svg%3E" alt="Imagem ilustrativa da notícia sobre o mutirão Direito de Existir" class="assistido-card__img" loading="lazy" />
+              <div class="assistido-card__img-overlay" aria-hidden="true"></div>
             </div>
-            <blockquote class="assistido-card__quote">
-              <p>Espaço reservado para novo relato de assistido com link para notícia publicada pela Defensoria.</p>
-              <footer class="assistido-card__author">
-                <span class="assistido-card__name">Nome do assistido</span>
-                <span class="assistido-card__context">Contexto da notícia</span>
+            <div class="assistido-card__quote assistido-card__quote--release">
+              <p class="assistido-card__kicker">Release 03</p>
+              <h3 class="assistido-card__release-title">DIREITO DE EXISTIR: Indígena Macuxi inclui etnia nos registros civis durante mutirão da DPE-RR</h3>
+              <p class="assistido-card__release-desc">Durante o mutirão na Praça do Centro Cívico, Sara Vitória dos Santos Pereira regularizou a certidão de nascimento e incluiu sua etnia, reforçando o acesso à identidade civil e ao reconhecimento dos povos originários.</p>
+              <footer class="assistido-card__author assistido-card__author--release">
+                <span class="assistido-card__name">Notícia institucional</span>
+                <span class="assistido-card__context">Publicado em 24 de abril de 2026</span>
               </footer>
-            </blockquote>
-            <a href="#" class="assistido-card__link" aria-label="Adicionar link da próxima notícia de assistido">
+            </div>
+            <a href="https://defensoria.rr.def.br/comunicacao/noticias/172/" target="_blank" rel="noopener noreferrer" class="assistido-card__link" aria-label="Ler release sobre inclusão de etnia em registros civis">
               <span>Ler mais</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -363,29 +367,38 @@
             </a>
           </article>
 
-          <!-- Card 4 -->
+          <!-- Release Card 4 -->
           <article class="assistido-card">
-            <div class="assistido-card__img-wrap assistido-card__img-wrap--empty" aria-hidden="true">
-              <svg class="assistido-card__placeholder-icon" width="52" height="52" viewBox="0 0 52 52" fill="none">
-                <rect x="7" y="9" width="38" height="34" rx="3" stroke="currentColor" stroke-width="1.6"/>
-                <path d="M13 35l10-11 8 8 8-10 6 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="19" cy="19" r="3.5" stroke="currentColor" stroke-width="1.6"/>
-              </svg>
+            <div class="assistido-card__img-wrap assistido-card__img-wrap--neutral">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g3' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%23f3ede0'/%3E%3Cstop offset='100%25' stop-color='%23ddd2bb'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g3)'/%3E%3Crect x='84' y='88' width='632' height='424' rx='28' fill='none' stroke='%233a8057' stroke-opacity='0.32' stroke-width='3'/%3E%3Ccircle cx='200' cy='210' r='72' fill='%233a8057' fill-opacity='0.1'/%3E%3Cpath d='M140 396h520' stroke='%23204931' stroke-opacity='0.24' stroke-width='2'/%3E%3Ctext x='140' y='242' fill='%23204931' font-family='Blinker, Arial, sans-serif' font-size='38' font-weight='700'%3ENova hist%C3%B3ria em breve%3C/text%3E%3Ctext x='140' y='298' fill='%23204931' fill-opacity='0.72' font-family='Blinker, Arial, sans-serif' font-size='22'%3ERelease aguardando publica%C3%A7%C3%A3o oficial%3C/text%3E%3C/svg%3E" alt="Imagem neutra temporária para a próxima matéria institucional" class="assistido-card__img" loading="lazy" />
+              <div class="assistido-card__img-overlay" aria-hidden="true"></div>
             </div>
-            <blockquote class="assistido-card__quote">
-              <p>Espaço reservado para mais uma história de assistido com título, contexto e link para a notícia correspondente.</p>
-              <footer class="assistido-card__author">
-                <span class="assistido-card__name">Nome do assistido</span>
-                <span class="assistido-card__context">Contexto da notícia</span>
+            <div class="assistido-card__quote assistido-card__quote--release">
+              <p class="assistido-card__kicker">Release 04</p>
+              <h3 class="assistido-card__release-title">DPE-RR garante medicamento de alto custo para paciente em tratamento contra câncer de mama</h3>
+              <p class="assistido-card__release-desc">Matéria reservada para a publicação da próxima segunda-feira, com destaque para a atuação institucional no acesso à saúde e na garantia de tratamento continuado.</p>
+              <footer class="assistido-card__author assistido-card__author--release">
+                <span class="assistido-card__name">Publicação prevista</span>
+                <span class="assistido-card__context">Aguardando link oficial da matéria</span>
               </footer>
-            </blockquote>
-            <a href="#" class="assistido-card__link" aria-label="Adicionar link da próxima notícia de assistido">
+            </div>
+            <!-- TODO: replace with article URL after Monday publication -->
+            <a href="#" class="assistido-card__link assistido-card__link--disabled" aria-label="Link da próxima matéria institucional ainda não disponível">
               <span>Ler mais</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </a>
           </article>
+        </div>
+
+        <div class="assistidos__actions">
+          <a href="https://defensoria.rr.def.br/comunicacao/noticias/" target="_blank" rel="noopener noreferrer" class="defensores-cta__btn assistidos__more-link" aria-label="Abrir a página de notícias da Defensoria em nova aba">
+            <span>Conheça mais histórias</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
         </div>
 
         <!-- ── Sub-seção: Vídeos ── -->
@@ -406,58 +419,92 @@
               <div class="video-card__thumb">
                 <iframe
                   class="video-card__embed"
-                  src="https://www.youtube-nocookie.com/embed/LZFGJzHQOus"
-                  title="Vídeo de assistidos"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/LZFGJzHQOus"
+                  title="Vídeo 1 - Reel Instagram DLSNJb-MRzD"
                   loading="lazy"
                   referrerpolicy="strict-origin-when-cross-origin"
+                  frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
                 ></iframe>
               </div>
               <div class="video-card__info">
-                <p class="video-card__title">Registro civíl é cidadania</p>
-                <p class="video-card__desc">Relato em vídeo sobre a garantia dos direitos fundamentais</p>
+                <p class="video-card__title">Vídeo 01</p>
+                <p class="video-card__desc">Instagram Reel de referência: https://www.instagram.com/reel/DLSNJb-MRzD/</p>
               </div>
             </article>
 
-            <!-- Vídeo 2: placeholder -->
+            <!-- Vídeo 2 -->
             <article class="video-card">
-              <div class="video-card__thumb" aria-label="Vídeo em breve">
-                <div class="video-card__thumb-bg" aria-hidden="true"></div>
-                <button class="video-card__play" aria-label="Reproduzir vídeo (em breve)" disabled>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M6 4l14 8-14 8V4Z" fill="currentColor"/>
-                  </svg>
-                </button>
-                <span class="video-card__badge">Em breve</span>
+              <div class="video-card__thumb">
+                <iframe
+                  class="video-card__embed"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/fVTCe5oxNF0"
+                  title="Vídeo 2 - Reel Instagram DA9cbGxuLm_"
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
               </div>
               <div class="video-card__info">
-                <p class="video-card__title">Título do vídeo 02</p>
-                <p class="video-card__desc">Descrição breve do relato ou contexto do vídeo a ser adicionado.</p>
+                <p class="video-card__title">Vídeo 02</p>
+                <p class="video-card__desc">Instagram Reel de referência: https://www.instagram.com/reel/DA9cbGxuLm_/</p>
               </div>
             </article>
 
-            <!-- Vídeo 3: placeholder -->
+            <!-- Vídeo 3 -->
             <article class="video-card">
-              <div class="video-card__thumb" aria-label="Vídeo em breve">
-                <div class="video-card__thumb-bg" aria-hidden="true"></div>
-                <button class="video-card__play" aria-label="Reproduzir vídeo (em breve)" disabled>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M6 4l14 8-14 8V4Z" fill="currentColor"/>
-                  </svg>
-                </button>
-                <span class="video-card__badge">Em breve</span>
+              <div class="video-card__thumb">
+                <iframe
+                  class="video-card__embed"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/Q7TzUoSIGjM"
+                  title="Vídeo 3 - Reel Instagram C-LG9BvuCpb"
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
               </div>
               <div class="video-card__info">
-                <p class="video-card__title">Título do vídeo 03</p>
-                <p class="video-card__desc">Descrição breve do relato ou contexto do vídeo a ser adicionado.</p>
+                <p class="video-card__title">Vídeo 03</p>
+                <p class="video-card__desc">Instagram Reel de referência: https://www.instagram.com/reel/C-LG9BvuCpb/</p>
+              </div>
+            </article>
+
+            <!-- Vídeo 4 -->
+            <article class="video-card">
+              <div class="video-card__thumb">
+                <iframe
+                  class="video-card__embed"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/0hZBzv2W2pY"
+                  title="Vídeo 4 - Dia das Mães"
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="video-card__info">
+                <p class="video-card__title">Vídeo do Dia das Mães</p>
+                <p class="video-card__desc">Espaço reservado para o novo vídeo comemorativo após a publicação no YouTube.</p>
               </div>
             </article>
 
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
     <section id="defensores" class="defensores-cta-section" aria-labelledby="defensores-cta-title">
       <div class="defensores-cta__inner">
@@ -469,7 +516,7 @@
         <h2 id="defensores-cta-title" class="section-title">Os <em>Defensores</em><br />de Roraima</h2>
         <p class="section-subtitle">52 profissionais comprometidos com a justiça e a cidadania em todo o estado</p>
         <a href="pages/defensores.html" class="defensores-cta__btn" aria-label="Ver todos os defensores públicos de Roraima">
-          <span>Conheça os defensores</span>
+          <span>Conheça o time que compõe a defensoria</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
