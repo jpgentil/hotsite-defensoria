@@ -14,6 +14,124 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 
   <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .casados-editorial-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin-top: 2rem;
+    }
+
+    .casados-editorial-card,
+    .casados-quote,
+    .casados-gallery-card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(201, 168, 76, 0.22);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+    }
+
+    .casados-editorial-card img,
+    .casados-gallery-card img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .casados-editorial-card figcaption,
+    .casados-gallery-copy {
+      padding: 1rem 1.1rem 1.2rem;
+    }
+
+    .casados-editorial-card figcaption,
+    .casados-gallery-copy,
+    .casados-stat span {
+      text-wrap: pretty;
+    }
+
+    .casados-quote {
+      padding: 1.5rem;
+      align-self: center;
+    }
+
+    .casados-quote p {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.25rem, 2vw, 1.7rem);
+      line-height: 1.35;
+    }
+
+    .casados-quote span,
+    .casados-editorial-card strong,
+    .casados-gallery-copy strong {
+      display: block;
+      margin-top: 0.85rem;
+      color: #d7bd72;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .casados-stat-strip {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      margin-top: 2rem;
+    }
+
+    .casados-stat {
+      padding: 1rem 1.1rem;
+      border-left: 3px solid #c9a84c;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 16px;
+    }
+
+    .casados-stat strong {
+      display: block;
+      font-family: "Blinker", sans-serif;
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .casados-gallery {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: 1.25fr 0.75fr;
+      align-items: stretch;
+    }
+
+    .casados-gallery-card--feature {
+      min-height: 420px;
+      position: relative;
+    }
+
+    .casados-gallery-card--feature .casados-gallery-copy {
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      background: linear-gradient(180deg, rgba(9, 20, 15, 0.1), rgba(9, 20, 15, 0.84));
+      border-radius: 18px;
+      backdrop-filter: blur(6px);
+    }
+
+    .casados-gallery-stack {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .casados-gallery-stack .casados-gallery-card:first-child img {
+      aspect-ratio: 4 / 3;
+    }
+
+    @media (max-width: 860px) {
+      .casados-gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body id="top" class="inner-page" data-asset-prefix="../">
   <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
@@ -96,7 +214,7 @@
           </div>
         </div>
         <div class="inner-hero__media" aria-hidden="true">
-          <img src="../img/enfimcasados.png" alt="" />
+          <img src="../img/enfim_casados5.jpeg" alt="" />
           <div class="inner-hero__media-inner">
             <span class="inner-hero__kicker">Reconhecimento gratuito</span>
             <p class="inner-hero__caption">Cada edição transforma histórias já construídas em vínculo civil regularizado, com efeitos práticos na vida das famílias.</p>
@@ -118,6 +236,20 @@
           <p>Na edição dos 26 anos da Defensoria, o projeto chega à sua 4ª edição na capital, com previsão de reunir até 270 casais. A cerimônia acontece no Mirante Edileusa Lóz, na Orla Taumanan, em parceria com a Prefeitura de Boa Vista.</p>
           <p>A ação conta com o apoio da Corregedoria-Geral de Justiça, da Justiça Itinerante do Tribunal de Justiça de Roraima e dos cartórios do 1º Ofício Loureiro e do 2º Ofício Nathalia Lago, que atuam em cada etapa para garantir que tudo aconteça de forma gratuita e organizada.</p>
           <p class="texto-abertura__destaque">Com o documento em mãos, os casais passam a acessar direitos que fazem diferença concreta no dia a dia.</p>
+          <div class="casados-stat-strip" aria-label="Indicadores do projeto Enfim Casados">
+            <div class="casados-stat">
+              <strong>4ª</strong>
+              <span>edição em Boa Vista dentro da programação de 26 anos.</span>
+            </div>
+            <div class="casados-stat">
+              <strong>270</strong>
+              <span>casais previstos para a cerimônia coletiva atual.</span>
+            </div>
+            <div class="casados-stat">
+              <strong>100%</strong>
+              <span>gratuito, com fluxo articulado entre Defensoria, Justiça e cartórios.</span>
+            </div>
+          </div>
         </div>
         <aside class="page-panel" aria-labelledby="casados-panel-title">
           <h2 id="casados-panel-title" class="page-panel__title">Pontos-chave</h2>
@@ -126,7 +258,36 @@
             <li><span class="page-panel__eyebrow">Previsão</span><span class="page-panel__text">Até 270 casais reunidos na nova cerimônia.</span></li>
             <li><span class="page-panel__eyebrow">Local</span><span class="page-panel__text">Mirante Edileusa Lóz, na Orla Taumanan.</span></li>
           </ul>
+          <figure class="casados-editorial-card" style="margin: 1.5rem 0 0;">
+            <img src="../img/enfim_casados4.jpeg" alt="Casais reunidos em cerimônia coletiva do projeto Enfim Casados." loading="lazy" />
+            <figcaption>
+              <strong>Cerimônia pública</strong>
+              A regularização civil ganha visibilidade e celebra vínculos já consolidados pela vida cotidiana.
+            </figcaption>
+          </figure>
         </aside>
+      </div>
+    </section>
+
+    <section class="page-highlights" aria-labelledby="casados-editorial-title">
+      <div class="section-eyebrow">
+        <span class="eyebrow-line" aria-hidden="true"></span>
+        <span class="eyebrow-text">Cena e contexto</span>
+        <span class="eyebrow-line" aria-hidden="true"></span>
+      </div>
+      <h2 id="casados-editorial-title" class="section-title">Um rito civil com escala pública e impacto íntimo</h2>
+      <div class="casados-editorial-grid">
+        <figure class="casados-editorial-card">
+          <img src="../img/enfim_casados2.jpeg" alt="Participantes do Enfim Casados durante registro fotográfico da cerimônia." loading="lazy" />
+          <figcaption>
+            <strong>Direitos formalizados</strong>
+            A cerimônia sintetiza documentação, acolhimento e reconhecimento institucional em um mesmo momento.
+          </figcaption>
+        </figure>
+        <blockquote class="casados-quote">
+          <p>"Cada uniao formalizada reafirma uma vitoria da cidadania e do direito de construir familia com seguranca juridica."</p>
+          <span>Defensoria Pública de Roraima</span>
+        </blockquote>
       </div>
     </section>
 
@@ -150,6 +311,34 @@
           <h3>Parceria institucional</h3>
           <p>A força do projeto está na articulação entre Defensoria, Judiciário, cartórios e apoio municipal.</p>
         </article>
+      </div>
+    </section>
+
+    <section class="page-story" aria-labelledby="casados-gallery-title">
+      <div class="section-eyebrow">
+        <span class="eyebrow-line" aria-hidden="true"></span>
+        <span class="eyebrow-text">Atmosfera da ação</span>
+      </div>
+      <h2 id="casados-gallery-title" class="section-title">Uma composição entre celebração, cidadania e organização coletiva</h2>
+      <div class="casados-gallery">
+        <figure class="casados-gallery-card casados-gallery-card--feature">
+          <img src="../img/enfimcasados.png" alt="Vista ampla da cerimônia do projeto Enfim Casados." loading="lazy" />
+          <figcaption class="casados-gallery-copy">
+            <strong>Escala humana</strong>
+            O encontro reúne centenas de histórias individuais em uma cerimônia única, visível e acessível.
+          </figcaption>
+        </figure>
+        <div class="casados-gallery-stack">
+          <div class="casados-gallery-card">
+            <img src="../img/enfim_casados3.jpeg" alt="Detalhe de casal participante do projeto Enfim Casados." loading="lazy" />
+          </div>
+          <div class="casados-gallery-card">
+            <div class="casados-gallery-copy">
+              <strong>Rede institucional</strong>
+              A Defensoria coordena um fluxo em que orientação jurídica, cartórios e Justiça Itinerante convergem para garantir gratuidade e segurança jurídica.
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

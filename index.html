@@ -341,18 +341,45 @@
 
           <!-- Card 3 -->
           <article class="assistido-card">
-            <div class="assistido-card__img-wrap">
-              <img src="img/assistido_03.jpeg" alt="Foto de assistido" class="assistido-card__img" loading="lazy" />
-              <div class="assistido-card__img-overlay" aria-hidden="true"></div>
+            <div class="assistido-card__img-wrap assistido-card__img-wrap--empty" aria-hidden="true">
+              <svg class="assistido-card__placeholder-icon" width="52" height="52" viewBox="0 0 52 52" fill="none">
+                <rect x="7" y="9" width="38" height="34" rx="3" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M13 35l10-11 8 8 8-10 6 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="19" cy="19" r="3.5" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
             </div>
             <blockquote class="assistido-card__quote">
-              <p></p>
+              <p>Espaço reservado para novo relato de assistido com link para notícia publicada pela Defensoria.</p>
               <footer class="assistido-card__author">
-                <span class="assistido-card__name"></span>
-                <span class="assistido-card__context"></span>
+                <span class="assistido-card__name">Nome do assistido</span>
+                <span class="assistido-card__context">Contexto da notícia</span>
               </footer>
             </blockquote>
-            <a href="" target="_blank" class="assistido-card__link" aria-label="Ler mais sobre a história de Luiz Carlos Souza de Oliveira">
+            <a href="#" class="assistido-card__link" aria-label="Adicionar link da próxima notícia de assistido">
+              <span>Ler mais</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="assistido-card">
+            <div class="assistido-card__img-wrap assistido-card__img-wrap--empty" aria-hidden="true">
+              <svg class="assistido-card__placeholder-icon" width="52" height="52" viewBox="0 0 52 52" fill="none">
+                <rect x="7" y="9" width="38" height="34" rx="3" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M13 35l10-11 8 8 8-10 6 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="19" cy="19" r="3.5" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </div>
+            <blockquote class="assistido-card__quote">
+              <p>Espaço reservado para mais uma história de assistido com título, contexto e link para a notícia correspondente.</p>
+              <footer class="assistido-card__author">
+                <span class="assistido-card__name">Nome do assistido</span>
+                <span class="assistido-card__context">Contexto da notícia</span>
+              </footer>
+            </blockquote>
+            <a href="#" class="assistido-card__link" aria-label="Adicionar link da próxima notícia de assistido">
               <span>Ler mais</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -374,20 +401,22 @@
 
           <div class="video-cards-grid">
 
-            <!-- Vídeo 1: placeholder -->
+            <!-- Vídeo 1 -->
             <article class="video-card">
-              <div class="video-card__thumb" aria-label="Vídeo em breve">
-                <div class="video-card__thumb-bg" aria-hidden="true"></div>
-                <button class="video-card__play" aria-label="Reproduzir vídeo (em breve)" disabled>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M6 4l14 8-14 8V4Z" fill="currentColor"/>
-                  </svg>
-                </button>
-                <span class="video-card__badge">Em breve</span>
+              <div class="video-card__thumb">
+                <iframe
+                  class="video-card__embed"
+                  src="https://www.youtube-nocookie.com/embed/LZFGJzHQOus"
+                  title="Vídeo de assistidos"
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
               </div>
               <div class="video-card__info">
-                <p class="video-card__title">Título do vídeo 01</p>
-                <p class="video-card__desc">Descrição breve do relato ou contexto do vídeo a ser adicionado.</p>
+                <p class="video-card__title">Registro civíl é cidadania</p>
+                <p class="video-card__desc">Relato em vídeo sobre a garantia dos direitos fundamentais</p>
               </div>
             </article>
 

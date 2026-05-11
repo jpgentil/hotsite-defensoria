@@ -14,6 +14,154 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 
   <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .corrida-editorial-band {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.85rem;
+      margin-top: 1.5rem;
+    }
+
+    .corrida-editorial-band__item {
+      border: 1px solid rgba(201, 168, 76, 0.28);
+      background: rgba(255, 255, 255, 0.06);
+      padding: 0.9rem 1rem;
+      backdrop-filter: blur(6px);
+    }
+
+    .corrida-editorial-band__label {
+      display: block;
+      font-family: var(--font-ui);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(228, 199, 122, 0.84);
+      margin-bottom: 0.35rem;
+    }
+
+    .corrida-editorial-band__text {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: rgba(242, 242, 242, 0.88);
+    }
+
+    .corrida-editorial {
+      padding: 1rem var(--body-padding) 2rem;
+    }
+
+    .corrida-editorial__layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+
+    .corrida-editorial__figure,
+    .corrida-editorial__panel {
+      border: 1px solid rgba(201, 168, 76, 0.22);
+      overflow: hidden;
+      box-shadow: 0 16px 38px rgba(44, 46, 45, 0.08);
+    }
+
+    .corrida-editorial__figure {
+      margin: 0;
+      position: relative;
+      min-height: 100%;
+      background: #08130d;
+    }
+
+    .corrida-editorial__figure img {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      object-fit: cover;
+      display: block;
+      filter: saturate(0.92);
+    }
+
+    .corrida-editorial__caption {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 1.4rem;
+      background: linear-gradient(180deg, rgba(8, 19, 13, 0) 0%, rgba(8, 19, 13, 0.92) 100%);
+      color: var(--color-white);
+    }
+
+    .corrida-editorial__caption strong,
+    .corrida-editorial__panel h2 {
+      font-family: var(--font-display);
+    }
+
+    .corrida-editorial__caption p,
+    .corrida-editorial__panel p,
+    .corrida-editorial__panel li {
+      font-family: var(--font-body);
+      line-height: 1.75;
+    }
+
+    .corrida-editorial__panel {
+      background: linear-gradient(180deg, #fffdfa 0%, #f5efe3 100%);
+      padding: 1.5rem;
+    }
+
+    .corrida-editorial__panel-logo {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+
+    .corrida-editorial__chips {
+      list-style: none;
+      padding: 0;
+      margin: 1.1rem 0 1.4rem;
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .corrida-editorial__chips li {
+      border-left: 3px solid rgba(201, 168, 76, 0.55);
+      padding-left: 0.9rem;
+      color: rgba(44, 46, 45, 0.78);
+    }
+
+    .corrida-editorial__eyebrow {
+      display: block;
+      font-family: var(--font-ui);
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--primary-color);
+      margin-bottom: 0.2rem;
+    }
+
+    .corrida-editorial__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.9rem 1rem;
+      border: 1px solid rgba(201, 168, 76, 0.36);
+      background: rgba(201, 168, 76, 0.12);
+      color: var(--ink);
+      text-decoration: none;
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 1024px) {
+      .corrida-editorial__layout,
+      .corrida-editorial-band {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body id="top" class="inner-page" data-asset-prefix="../">
   <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
@@ -100,6 +248,20 @@
               </svg>
             </a>
           </div>
+          <div class="corrida-editorial-band" aria-label="Destaques da Corrida dos 26 Anos">
+            <div class="corrida-editorial-band__item">
+              <span class="corrida-editorial-band__label">Data</span>
+              <span class="corrida-editorial-band__text">7 de junho de 2026, com largada prevista para o fim da tarde.</span>
+            </div>
+            <div class="corrida-editorial-band__item">
+              <span class="corrida-editorial-band__label">Formato</span>
+              <span class="corrida-editorial-band__text">Corrida adulta, Corridinha Kids e participacao aberta para quem quer celebrar em familia.</span>
+            </div>
+            <div class="corrida-editorial-band__item">
+              <span class="corrida-editorial-band__label">Clima</span>
+              <span class="corrida-editorial-band__text">Uma vitoria de presenca publica: a Defensoria ocupa a cidade com esporte, convivio e cidadania.</span>
+            </div>
+          </div>
         </div>
         <div class="inner-hero__media" aria-hidden="true">
           <img src="../img/corrida_def.jpg" alt="" />
@@ -134,6 +296,39 @@
             <li><span class="page-panel__eyebrow">Inscrição</span><span class="page-panel__text"><a href="https://inscricoesroraima.com.br/corridas/dperoraima-2026" target="_blank" rel="noopener noreferrer">inscricoesroraima.com.br/corridas/dperoraima-2026</a></span></li>
           </ul>
         </aside>
+      </div>
+    </section>
+
+    <section class="corrida-editorial" aria-labelledby="corrida-editorial-title">
+      <div class="section-eyebrow">
+        <span class="eyebrow-line" aria-hidden="true"></span>
+        <span class="eyebrow-text">Atmosfera do Evento</span>
+        <span class="eyebrow-line" aria-hidden="true"></span>
+      </div>
+      <div class="corrida-editorial__layout">
+        <figure class="corrida-editorial__figure">
+          <img src="../img/corrida_def.jpg" alt="Participantes em momento de corrida e celebraÃ§Ã£o esportiva da Defensoria." loading="lazy" />
+          <figcaption class="corrida-editorial__caption">
+            <strong style="display:block; font-size:1.5rem; margin-bottom:0.4rem;">Uma corrida que celebra a Defensoria junto da populacao</strong>
+            <p style="margin:0; color:rgba(242, 242, 242, 0.8);">O evento reafirma uma conquista institucional: transformar aniversario em encontro aberto, energia coletiva e participacao popular.</p>
+          </figcaption>
+        </figure>
+        <div class="corrida-editorial__panel">
+          <img class="corrida-editorial__panel-logo" src="../img/logo_26_anos.svg" alt="Marca comemorativa dos 26 anos da Defensoria." loading="lazy" />
+          <h2 id="corrida-editorial-title" class="section-title" style="font-size:clamp(1.7rem, 2.5vw, 2.3rem); margin:0 0 0.7rem;">Uma celebracao que traduz proximidade com a sociedade</h2>
+          <p style="margin:0; color:rgba(44, 46, 45, 0.78);">A Corrida dos 26 Anos mostra uma Defensoria que nao apenas atua nos processos, mas tambem ocupa a vida publica com energia, escuta e pertencimento.</p>
+          <ul class="corrida-editorial__chips">
+            <li><span class="corrida-editorial__eyebrow">Chegada</span>O encontro no Parque Anaua reforca a abertura da instituicao para diferentes perfis de publico.</li>
+            <li><span class="corrida-editorial__eyebrow">Percurso</span>O evento acolhe corredores, criancas, familias e participantes que desejam apenas caminhar e celebrar.</li>
+            <li><span class="corrida-editorial__eyebrow">Memoria</span>Cada edicao amplia a lembranca de uma Defensoria presente, acessivel e conectada com a cidade.</li>
+          </ul>
+          <a class="corrida-editorial__cta" href="https://inscricoesroraima.com.br/corridas/dperoraima-2026" target="_blank" rel="noopener noreferrer" aria-label="Abrir inscriÃ§Ã£o da Corrida dos 26 Anos em nova aba">
+            <span>Garantir inscricao</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
 

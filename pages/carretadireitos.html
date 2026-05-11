@@ -14,6 +14,118 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 
   <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .carreta-editorial-band {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.85rem;
+      margin-top: 1.5rem;
+    }
+
+    .carreta-editorial-band__item {
+      border: 1px solid rgba(201, 168, 76, 0.28);
+      background: rgba(255, 255, 255, 0.06);
+      padding: 0.9rem 1rem;
+      backdrop-filter: blur(6px);
+    }
+
+    .carreta-editorial-band__label {
+      display: block;
+      font-family: var(--font-ui);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(228, 199, 122, 0.84);
+      margin-bottom: 0.35rem;
+    }
+
+    .carreta-editorial-band__text {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: rgba(242, 242, 242, 0.88);
+    }
+
+    .carreta-photo-essay {
+      padding: 1rem var(--body-padding) 2rem;
+    }
+
+    .carreta-photo-essay__layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+
+    .carreta-photo-essay__feature,
+    .carreta-photo-essay__stack article {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid rgba(201, 168, 76, 0.22);
+      background: #fffdfa;
+      box-shadow: 0 16px 38px rgba(44, 46, 45, 0.08);
+    }
+
+    .carreta-photo-essay__feature img,
+    .carreta-photo-essay__stack img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .carreta-photo-essay__feature img {
+      aspect-ratio: 16 / 10;
+    }
+
+    .carreta-photo-essay__feature figcaption,
+    .carreta-photo-essay__stack-content {
+      padding: 1.15rem 1.2rem 1.25rem;
+    }
+
+    .carreta-photo-essay__stack {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .carreta-photo-essay__stack img {
+      aspect-ratio: 4 / 3;
+    }
+
+    .carreta-photo-essay__eyebrow {
+      display: inline-block;
+      font-family: var(--font-ui);
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--primary-color);
+      margin-bottom: 0.45rem;
+    }
+
+    .carreta-photo-essay__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 2vw, 1.9rem);
+      color: var(--ink);
+      margin: 0 0 0.55rem;
+    }
+
+    .carreta-photo-essay__text {
+      font-family: var(--font-body);
+      font-size: 0.96rem;
+      line-height: 1.8;
+      color: rgba(44, 46, 45, 0.76);
+      margin: 0;
+    }
+
+    @media (max-width: 1024px) {
+      .carreta-photo-essay__layout,
+      .carreta-editorial-band {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body id="top" class="inner-page" data-asset-prefix="../">
   <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
@@ -94,6 +206,20 @@
               </svg>
             </a>
           </div>
+          <div class="carreta-editorial-band" aria-label="Destaques da Carreta dos Direitos">
+            <div class="carreta-editorial-band__item">
+              <span class="carreta-editorial-band__label">Territorio</span>
+              <span class="carreta-editorial-band__text">A Defensoria venceu a distancia e levou atendimento a bairros, municipios e comunidades historicamente menos assistidos.</span>
+            </div>
+            <div class="carreta-editorial-band__item">
+              <span class="carreta-editorial-band__label">Servico</span>
+              <span class="carreta-editorial-band__text">Orientacao, documentacao e encaminhamento concentrados em um mesmo ponto.</span>
+            </div>
+            <div class="carreta-editorial-band__item">
+              <span class="carreta-editorial-band__label">Presenca</span>
+              <span class="carreta-editorial-band__text">Cada parada confirma uma vitoria institucional: fazer a justica chegar antes que o direito espere demais.</span>
+            </div>
+          </div>
         </div>
         <div class="inner-hero__media" aria-hidden="true">
           <img src="../img/carretadireitos.png" alt="" />
@@ -126,6 +252,40 @@
             <li><span class="page-panel__eyebrow">Impacto</span><span class="page-panel__text">Mais de 231 mil atendimentos registrados em 2025.</span></li>
           </ul>
         </aside>
+      </div>
+    </section>
+
+    <section class="carreta-photo-essay" aria-labelledby="carreta-photo-essay-title">
+      <div class="section-eyebrow">
+        <span class="eyebrow-line" aria-hidden="true"></span>
+        <span class="eyebrow-text">Presenca em Campo</span>
+        <span class="eyebrow-line" aria-hidden="true"></span>
+      </div>
+      <div class="carreta-photo-essay__layout">
+        <figure class="carreta-photo-essay__feature">
+          <img src="../img/carretadireitos.png" alt="Estrutura da Carreta dos Direitos preparada para atendimento itinerante." loading="lazy" />
+          <figcaption>
+            <span class="carreta-photo-essay__eyebrow">Estrutura itinerante</span>
+            <h2 id="carreta-photo-essay-title" class="carreta-photo-essay__title">Uma conquista que aproxima o Estado de quem mais precisa</h2>
+            <p class="carreta-photo-essay__text">Quando estaciona, a Carreta reorganiza o fluxo do territorio ao redor dela: acolhe, orienta e transforma um equipamento visivel em porta de entrada para direitos que estavam distantes.</p>
+          </figcaption>
+        </figure>
+        <div class="carreta-photo-essay__stack">
+          <article>
+            <img src="../img/assistido_01.jpeg" alt="Assistido atendido pela Defensoria em acao vinculada a Carreta dos Direitos." loading="lazy" />
+            <div class="carreta-photo-essay__stack-content">
+              <span class="carreta-photo-essay__eyebrow">Rosto do atendimento</span>
+              <p class="carreta-photo-essay__text">Cada atendimento concluido representa uma vitoria concreta para o assistido e para a missao publica da Defensoria em Roraima.</p>
+            </div>
+          </article>
+          <article>
+            <img src="../img/assistido_02.jpeg" alt="Moradora em contexto de atendimento comunitario realizado pela Defensoria." loading="lazy" />
+            <div class="carreta-photo-essay__stack-content">
+              <span class="carreta-photo-essay__eyebrow">Escuta e continuidade</span>
+              <p class="carreta-photo-essay__text">Mais do que resolver demandas urgentes, a acao fortalece confianca, continuidade e acesso qualificado a direitos.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
