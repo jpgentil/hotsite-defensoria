@@ -26,6 +26,7 @@
       border: 1px solid rgba(201, 168, 76, 0.28);
       background: rgba(255, 255, 255, 0.06);
       padding: 0.9rem 1rem;
+      -webkit-backdrop-filter: blur(6px);
       backdrop-filter: blur(6px);
     }
 
@@ -54,7 +55,7 @@
 
     .carreta-photo-essay__layout {
       display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      grid-template-columns: minmax(0, 1.15fr) minmax(min(280px, 100%), 0.85fr);
       gap: 1.5rem;
       align-items: stretch;
     }
@@ -117,6 +118,44 @@
       line-height: 1.8;
       color: rgba(44, 46, 45, 0.76);
       margin: 0;
+    }
+
+    .carreta-editorial-band__item {
+      counter-increment: band-item;
+      position: relative;
+    }
+
+    .carreta-editorial-band__item::before {
+      content: "0" counter(band-item);
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: rgba(201, 168, 76, 0.45);
+      margin-bottom: 0.55rem;
+    }
+
+    .carreta-editorial-band {
+      counter-reset: band-item;
+    }
+
+    .page-timeline__item {
+      position: relative;
+    }
+
+    .page-timeline__item:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 1.6rem;
+      right: -1px;
+      width: 1px;
+      height: calc(100% - 1.6rem);
+      background: linear-gradient(
+        to bottom,
+        rgba(201, 168, 76, 0.35),
+        rgba(201, 168, 76, 0)
+      );
     }
 
     @media (max-width: 1024px) {
@@ -197,7 +236,7 @@
             <span class="eyebrow-text">Programa 01 · Justiça Itinerante</span>
           </div>
           <h1 id="carreta-title" class="inner-hero__title"><em>Carreta</em><br />dos Direitos</h1>
-          <p class="inner-hero__lead">Desde 2024, a Carreta dos Direitos percorre Roraima levando a Defensoria para perto de quem mais precisa, transformando deslocamento em acesso real à justiça.</p>
+          <p class="inner-hero__lead">Desde 2024, a Carreta dos Direitos percorre Roraima levando a Defensoria para perto de quem mais precisa, transformando deslocamento em acesso à justiça.</p>
           <div class="inner-hero__actions">
             <a href="#conteudo" class="page-cta">
               <span>Ler conteúdo</span>
@@ -208,23 +247,23 @@
           </div>
           <div class="carreta-editorial-band" aria-label="Destaques da Carreta dos Direitos">
             <div class="carreta-editorial-band__item">
-              <span class="carreta-editorial-band__label">Territorio</span>
-              <span class="carreta-editorial-band__text">A Defensoria venceu a distancia e levou atendimento a bairros, municipios e comunidades historicamente menos assistidos.</span>
+              <span class="carreta-editorial-band__label">Território</span>
+              <span class="carreta-editorial-band__text">A Defensoria Pública ampliou o acesso à justiça ao levar atendimento jurídico e social a bairros, municípios e comunidades historicamente em situação de maior vulnerabilidade e com menor acesso aos serviços públicos.</span>
             </div>
             <div class="carreta-editorial-band__item">
-              <span class="carreta-editorial-band__label">Servico</span>
-              <span class="carreta-editorial-band__text">Orientacao, documentacao e encaminhamento concentrados em um mesmo ponto.</span>
+              <span class="carreta-editorial-band__label">Serviço</span>
+              <span class="carreta-editorial-band__text">Orientação, análise documental e encaminhamentos realizados de forma integrada em um único ponto de atendimento.</span>
             </div>
             <div class="carreta-editorial-band__item">
-              <span class="carreta-editorial-band__label">Presenca</span>
-              <span class="carreta-editorial-band__text">Cada parada confirma uma vitoria institucional: fazer a justica chegar antes que o direito espere demais.</span>
+              <span class="carreta-editorial-band__label">Presença</span>
+              <span class="carreta-editorial-band__text">Cada parada reforça o compromisso institucional da Defensoria Pública com a promoção do acesso à justiça, levando atendimento e garantia de direitos à população de forma célere e humanizada.</span>
             </div>
           </div>
         </div>
         <div class="inner-hero__media" aria-hidden="true">
           <img src="../img/carretadireitos.png" alt="" />
           <div class="inner-hero__media-inner">
-            <span class="inner-hero__kicker">Acesso onde ele falta</span>
+            <span class="inner-hero__kicker">Acesso onde se precisa</span>
             <p class="inner-hero__caption">A Carreta aproxima orientação jurídica, documentação e encaminhamento de quem nem sempre consegue chegar a uma unidade fixa.</p>
           </div>
         </div>
@@ -238,7 +277,7 @@
             <span class="eyebrow-line" aria-hidden="true"></span>
             <span class="eyebrow-text">O Programa</span>
           </div>
-          <h2 id="carreta-story-title" class="section-title">Uma estrutura móvel para levar direitos <em>até quem precisa  </em></h2>
+          <h2 id="carreta-story-title" class="section-title">Uma estrutura móvel para levar direitos <em>até quem precisa</em></h2>
           <p>Desde 2024, a Carreta dos Direitos percorre Roraima levando a Defensoria para perto de quem mais precisa. Já passou por cidades, bairros e comunidades onde o atendimento jurídico raramente faz parte da rotina.</p>
           <p>Todo mês, ela para em uma nova localidade e vira referência para quem tem situações represadas por falta de acesso ou informação. A lógica é simples: se a barreira está na distância, a instituição se movimenta.</p>
           <p>Só em 2025, foram mais de 231 mil atendimentos em todo o estado. Dentro da carreta, pessoas conseguem tirar documentos, buscar orientação e dar andamento em questões que pareciam sem saída.</p>
@@ -258,31 +297,55 @@
     <section class="carreta-photo-essay" aria-labelledby="carreta-photo-essay-title">
       <div class="section-eyebrow">
         <span class="eyebrow-line" aria-hidden="true"></span>
-        <span class="eyebrow-text">Presenca em Campo</span>
+        <span class="eyebrow-text">Presença em Campo</span>
         <span class="eyebrow-line" aria-hidden="true"></span>
       </div>
+      <h2 id="carreta-photo-essay-title" class="carreta-photo-essay__title">Uma conquista que aproxima o Estado de quem mais precisa</h2>
       <div class="carreta-photo-essay__layout">
         <figure class="carreta-photo-essay__feature">
-          <img src="../img/carretadireitos.png" alt="Estrutura da Carreta dos Direitos preparada para atendimento itinerante." loading="lazy" />
+          <picture>
+            <source type="image/jpeg" srcset="../img/_carreta/carretadireitos.png" />
+            <img src="../img/_carreta/carretadireitos.png" alt="Estrutura da Carreta dos Direitos preparada para atendimento itinerante." loading="lazy" decoding="async" fetchpriority="low" />
+          </picture>
           <figcaption>
             <span class="carreta-photo-essay__eyebrow">Estrutura itinerante</span>
-            <h2 id="carreta-photo-essay-title" class="carreta-photo-essay__title">Uma conquista que aproxima o Estado de quem mais precisa</h2>
-            <p class="carreta-photo-essay__text">Quando estaciona, a Carreta reorganiza o fluxo do territorio ao redor dela: acolhe, orienta e transforma um equipamento visivel em porta de entrada para direitos que estavam distantes.</p>
+            <p class="carreta-photo-essay__text">Quando estaciona, a Carreta reorganiza o fluxo do território ao redor dela: acolhe, orienta e transforma um equipamento visível em porta de entrada para direitos que estavam distantes.</p>
           </figcaption>
         </figure>
-        <div class="carreta-photo-essay__stack">
+        <div class="carreta-photo-essay__stack" aria-label="Galeria de imagens da Carreta">
           <article>
-            <img src="../img/assistido_01.jpeg" alt="Assistido atendido pela Defensoria em acao vinculada a Carreta dos Direitos." loading="lazy" />
+            <img src="../img/_carreta/historias_da_carreta1.jpeg" alt="Voluntária auxiliando em organização de documentos durante atendimento." loading="lazy" decoding="async" />
             <div class="carreta-photo-essay__stack-content">
               <span class="carreta-photo-essay__eyebrow">Rosto do atendimento</span>
-              <p class="carreta-photo-essay__text">Cada atendimento concluido representa uma vitoria concreta para o assistido e para a missao publica da Defensoria em Roraima.</p>
+              <p class="carreta-photo-essay__text">Cada atendimento concluído representa uma vitória concreta para o assistido e para a missão pública da Defensoria em Roraima.</p>
             </div>
           </article>
           <article>
-            <img src="../img/assistido_02.jpeg" alt="Moradora em contexto de atendimento comunitario realizado pela Defensoria." loading="lazy" />
+            <img src="../img/_carreta/historias_da_carreta2.jpeg" alt="Atendimento comunitário em praça pública." loading="lazy" decoding="async" />
             <div class="carreta-photo-essay__stack-content">
               <span class="carreta-photo-essay__eyebrow">Escuta e continuidade</span>
-              <p class="carreta-photo-essay__text">Mais do que resolver demandas urgentes, a acao fortalece confianca, continuidade e acesso qualificado a direitos.</p>
+              <p class="carreta-photo-essay__text">Mais do que resolver demandas urgentes, a ação fortalece confiança, continuidade e acesso qualificado a direitos.</p>
+            </div>
+          </article>
+          <article>
+            <img src="../img/_carreta/historias_da_carreta3.jpeg" alt="Registro de emissão de documentos no interior da Carreta." loading="lazy" decoding="async" />
+            <div class="carreta-photo-essay__stack-content">
+              <span class="carreta-photo-essay__eyebrow">Documentação</span>
+              <p class="carreta-photo-essay__text">Emissão de documentos e orientações práticas agilizam a vida de quem precisa.</p>
+            </div>
+          </article>
+          <article>
+            <img src="../img/_carreta/historias_da_carreta4.jpeg" alt="Equipe da Defensoria durante atendimento itinerante." loading="lazy" decoding="async" />
+            <div class="carreta-photo-essay__stack-content">
+              <span class="carreta-photo-essay__eyebrow">Equipe</span>
+              <p class="carreta-photo-essay__text">Profissionais qualificados atuando em conjunto para atendimento integrado.</p>
+            </div>
+          </article>
+          <article>
+            <img src="../img/_carreta/historias_da_carreta5.jpeg" alt="Moradora recebendo orientação jurídica junto à Carreta." loading="lazy" decoding="async" />
+            <div class="carreta-photo-essay__stack-content">
+              <span class="carreta-photo-essay__eyebrow">Impacto</span>
+              <p class="carreta-photo-essay__text">A presença da Carreta gera resultados imediatos para famílias e comunidades.</p>
             </div>
           </article>
         </div>
