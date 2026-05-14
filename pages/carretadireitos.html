@@ -158,6 +158,75 @@
       );
     }
 
+    /* ── PHOTO ESSAY: redesign editorial em grid 2D ── */
+.carreta-photo-essay__layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  align-items: start;
+}
+
+/* Feature ocupa col 1, linhas 1-2 */
+.carreta-photo-essay__feature {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.carreta-photo-essay__feature img {
+  aspect-ratio: 3 / 4; /* vertical — ocupa melhor o espaço de 2 linhas */
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Stack vira um sub-grid de 2 colunas × 2-3 linhas */
+.carreta-photo-essay__stack {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.carreta-photo-essay__stack img {
+  aspect-ratio: 4 / 3;
+}
+
+/* Em telas menores, colapsa para 1 coluna */
+@media (max-width: 900px) {
+  .carreta-photo-essay__layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .carreta-photo-essay__feature,
+  .carreta-photo-essay__stack {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .carreta-photo-essay__feature img {
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+
+  .carreta-photo-essay__stack {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .carreta-photo-essay__stack {
+    grid-template-columns: 1fr;
+  }
+}
+.carreta-photo-essay__stack img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center top;
+}
+
     @media (max-width: 1024px) {
       .carreta-photo-essay__layout,
       .carreta-editorial-band {
