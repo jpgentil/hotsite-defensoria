@@ -9,7 +9,7 @@
   /* Base (obrigatório) */
   --body-padding: 380px;
   --primary-color: #3a8057;
-  --primary-color-rbg: 58 128 87;
+  --primary-color-rgb: 58 128 87;
   --secondary-color: #204931;
   --transient-color: #5ec465;
   --foreground-color: #f0f0f0;
@@ -18,6 +18,7 @@
 
   /* Paleta extendida art déco */
   --gold: #c9a84c;
+  --gold-rgb: 201 168 76;
   --gold-light: #e4c77a;
   --gold-dark: #8a6d24;
   --cream: #f7f3eb;
@@ -203,7 +204,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 600;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(201, 168, 76, 0.55);
+  color: rgba(228, 199, 122, 0.92);
 }
 
 .nav-overlay__close {
@@ -759,7 +760,7 @@ a { text-decoration: none; color: inherit; }
   font-size: 0.6rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(242, 242, 242, 0.4);
+  color: rgba(242, 242, 242, 0.78);
 }
 
 @keyframes scrollPulse {
@@ -1496,7 +1497,7 @@ a { text-decoration: none; color: inherit; }
   font-size: 0.85rem;
   font-weight: 400;
   color: var(--ink);
-  opacity: 0.75;
+  opacity: 0.88;
   transition: opacity 0.2s ease;
 }
 
@@ -1678,7 +1679,7 @@ a { text-decoration: none; color: inherit; }
   font-family: var(--font-body);
   font-size: clamp(1rem, 1.5vw, 1.1rem);
   line-height: 1.9;
-  color: rgba(242, 242, 242, 0.72);
+  color: rgba(242, 242, 242, 0.88);
   max-width: 780px;
   margin: 0 0 2rem;
 }
@@ -1899,7 +1900,7 @@ a { text-decoration: none; color: inherit; }
   font-family: var(--font-body);
   font-size: 0.96rem;
   line-height: 1.8;
-  color: rgba(44, 46, 45, 0.72);
+  color: rgba(44, 46, 45, 0.82);
   margin: 0;
 }
 
@@ -1942,7 +1943,7 @@ a { text-decoration: none; color: inherit; }
   font-family: var(--font-body);
   font-size: 0.95rem;
   line-height: 1.75;
-  color: rgba(44, 46, 45, 0.72);
+  color: rgba(44, 46, 45, 0.82);
   margin: 0;
 }
 
@@ -2070,7 +2071,7 @@ a { text-decoration: none; color: inherit; }
   font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 300;
-  color: rgba(44, 46, 45, 0.6);
+  color: rgba(44, 46, 45, 0.78);
   letter-spacing: 0.02em;
   margin: 0;
 }
@@ -2712,7 +2713,7 @@ a { text-decoration: none; color: inherit; }
 .assistido-card__context {
   font-family: var(--font-body);
   font-size: 0.78rem;
-  color: rgba(44, 46, 45, 0.72);
+  color: rgba(44, 46, 45, 0.82);
   letter-spacing: 0.02em;
 }
 
@@ -2754,9 +2755,9 @@ a { text-decoration: none; color: inherit; }
 }
 
 .assistido-card__link--disabled {
-  opacity: 0.62;
-  background: rgba(201, 168, 76, 0.06);
-  color: rgba(44, 46, 45, 0.66);
+  opacity: 0.8;
+  background: rgba(201, 168, 76, 0.1);
+  color: rgba(44, 46, 45, 0.82);
 }
 
 /* ── Sub-seção vídeos ── */
@@ -2852,7 +2853,7 @@ a { text-decoration: none; color: inherit; }
   border-radius: 50%;
   border: 1.5px solid rgba(201, 168, 76, 0.54);
   background: rgba(255, 252, 245, 0.9);
-  color: #8f6a1d;
+  color: #6f5214;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2882,7 +2883,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #8f6a1d;
+  color: #6f5214;
   background: rgba(255, 249, 237, 0.96);
   border: 1px solid rgba(201, 168, 76, 0.38);
   padding: 3px 10px;
