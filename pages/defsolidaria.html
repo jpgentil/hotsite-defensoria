@@ -17,9 +17,6 @@
   <link rel="stylesheet" href="../styles.css" />
   <style>
     .solidaria-mosaic {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 0.9rem;
       width: 100%;
     }
 
@@ -42,11 +39,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-
-    .solidaria-mosaic__stack {
-      display: grid;
-      gap: 0.9rem;
     }
 
     .solidaria-board {
@@ -106,7 +98,6 @@
     }
 
     @media (max-width: 860px) {
-      .solidaria-mosaic,
       .solidaria-preview {
         grid-template-columns: 1fr;
       }
@@ -118,6 +109,21 @@
   </style>
 </head>
 <body id="top" class="inner-page" data-asset-prefix="../">
+
+  <!--Início do Vlibras-->
+    <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <!--Fim do Vlibras-->
+
+
   <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
   <button class="hamburger-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-overlay">
@@ -200,16 +206,8 @@
         <div class="inner-hero__media" aria-hidden="true">
           <div class="solidaria-mosaic">
             <figure>
-              <img src="../img/_release/assistido_01.jpeg" alt="" loading="lazy" />
+              <img src="../img/_defsolidaria/DEFENSORIA SOLIDARIA1.jpeg" alt="" loading="lazy" />
             </figure>
-            <div class="solidaria-mosaic__stack">
-              <figure>
-                <img src="../img/_release/assistido_02.jpeg" alt="" loading="lazy" />
-              </figure>
-              <figure>
-                <img src="../img/_release/assistido_03.jpeg" alt="" loading="lazy" />
-              </figure>
-            </div>
           </div>
           <div class="inner-hero__media-inner">
             <span class="inner-hero__kicker">Ação em preparação</span>
@@ -249,8 +247,8 @@
             <li><span class="page-panel__eyebrow">Próximo passo</span><span class="page-panel__text">Divulgar agenda, parceiros e orientações assim que a ação for confirmada.</span></li>
           </ul>
           <figure class="solidaria-photo-card" style="margin-top: 1.5rem;">
-            <img src="../img/_release/assistido_02.jpeg" alt="Atendimento da Defensoria com aproximação humana em ação social." loading="lazy" />
-            <figcaption>A proposta reforca uma marca da Defensoria RR: unir acolhimento, articulacao social e resposta concreta para quem mais precisa.</figcaption>
+            <img src="../img/_defsolidaria/DEFENSORIA SOLIDARIA2.jpeg" alt="Atendimento da Defensoria com aproximação humana em ação social." loading="lazy" />
+            <figcaption>A proposta reforça uma marca da Defensoria RR: unir acolhimento, articulação social e resposta concreta para quem mais precisa.</figcaption>
           </figure>
         </aside>
       </div>
@@ -264,7 +262,7 @@
       <h2 id="solidaria-preview-title" class="section-title">Uma iniciativa pensada para ampliar o alcance social da Defensoria</h2>
       <div class="solidaria-preview">
         <figure>
-          <img src="../img/_release/assistido_03.jpeg" alt="Pessoa atendida em ambiente de acolhimento da Defensoria." loading="lazy" />
+          <img src="../img/_defsolidaria/DEFENSORIA SOLIDARIA3.jpeg" alt="Pessoa atendida em ambiente de acolhimento da Defensoria." loading="lazy" />
         </figure>
         <div class="solidaria-preview__copy">
           <span class="solidaria-preview__eyebrow">Mobilização com rosto humano</span>
@@ -310,15 +308,15 @@
       <h2 id="solidaria-gallery-title" class="section-title">Imagens que reforçam proximidade e alcance social</h2>
       <div class="solidaria-photo-grid">
         <figure class="solidaria-photo-card">
-          <img src="../img/_release/assistido_01.jpeg" alt="Registro de pessoa atendida pela Defensoria em ação de assistência." loading="lazy" />
+          <img src="../img/_defsolidaria/DEFENSORIA SOLIDARIA4.jpeg" alt="Registro de pessoa atendida pela Defensoria em ação de assistência." loading="lazy" />
           <figcaption>Presença territorial e vínculo direto com quem mais precisa de orientação e acesso.</figcaption>
         </figure>
         <figure class="solidaria-photo-card">
-          <img src="../img/_release/assistido_02.jpeg" alt="Equipe da Defensoria em atendimento com atenção individualizada." loading="lazy" />
+          <img src="../img/_defsolidaria/DEFENSORIA SOLIDARIA5.jpeg" alt="Equipe da Defensoria em atendimento com atenção individualizada." loading="lazy" />
           <figcaption>A potência da ação solidária está na combinação entre serviço, escuta e organização.</figcaption>
         </figure>
         <figure class="solidaria-photo-card">
-          <img src="../img/_release/assistido_03.jpeg" alt="Atendimento humanizado em contexto comunitário." loading="lazy" />
+          <img src="../img/_carreta/carretadireitos.png" alt="Atendimento humanizado em contexto comunitário." loading="lazy" />
           <figcaption>O foco da iniciativa e ampliar o impacto social de uma instituicao que ja acumula resultados concretos ao lado da populacao.</figcaption>
         </figure>
       </div>
