@@ -125,8 +125,6 @@ const DEFENSORES_FOTOS = [
 document.addEventListener('DOMContentLoaded', () => {
   gerarCards();
   configurarBotoesCTA();
-  configurarLazyGif();
-  configurarAcessibilidadeCards();
   configurarMenuHamburguer();
   iniciarExperiencia();
 });
@@ -253,7 +251,6 @@ function gerarCards() {
 
     article.className = 'defensor-card';
     article.setAttribute('role', 'listitem');
-    article.setAttribute('tabindex', '0');
     article.setAttribute('aria-label', `Defensor(a) ${def.nome}`);
 
     article.innerHTML = `
@@ -269,17 +266,6 @@ function gerarCards() {
           onerror="this.style.display='none'"
           aria-hidden="true"
         />
-        <img
-          class="defensor-card__gif"
-          src="${assetPrefix}img/defensores/Defensor-${numero}.gif"
-          alt=""
-          loading="lazy"
-          onerror="this.style.display='none'"
-          aria-hidden="true"
-        />
-        <div class="defensor-card__overlay" aria-hidden="true">
-          <p class="defensor-card__name">${def.nome}</p>
-        </div>
       </div>
       <div class="defensor-card__footer">
         <p class="defensor-card__footer-name">${def.nome}</p>
@@ -594,33 +580,6 @@ function configurarBotoesCTA() {
         gsap.to(btn, { scale: 1, duration: 0.3, ease: 'power2.out' });
       }
     });
-  });
-}
-
-function configurarAcessibilidadeCards() {
-  document.addEventListener('keydown', (e) => {
-    if (e.key !== 'Enter' && e.key !== ' ') return;
-
-    const card = e.target.closest('.defensor-card');
-    if (!card) return;
-
-    e.preventDefault();
-    card.classList.toggle('card-active');
-  });
-}
-
-function configurarLazyGif() {
-  const cards = document.querySelectorAll('.defensor-card');
-
-  cards.forEach((card) => {
-    const gif = card.querySelector('.defensor-card__gif');
-    if (!gif) return;
-
-    let gifLoaded = false;
-    const carregarGif = () => { gifLoaded = true; };
-
-    card.addEventListener('mouseenter', carregarGif, { once: true });
-    card.addEventListener('focus', carregarGif, { once: true });
   });
 }
 
